@@ -1,1 +1,8 @@
 https://github.com/Afdel11/ADES.git
+<!-- Header -->
+<header id="header"><div class="inner">
+		<a href="index.html" class="logo">Discotech</a>
+		<nav id="nav"><a href="index.html">Acceuil</a>
+			<a href="apropos.html">Qui suis je?</a>
+			<a href="articles.html">Articles</a>
+		</nav></div>

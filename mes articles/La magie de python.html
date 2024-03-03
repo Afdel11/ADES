@@ -1,0 +1,233 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>La magie de Python</title>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <style>
+        body {
+            text-align: justify;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 10px;
+        }
+
+        header, nav, footer, section {
+            text-align: center;
+        }
+
+        article {
+            text-align: left;
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 0 20px;
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<header id="header">
+    <div class="inner">
+        <a href="../index.html" class="logo">Discotech</a>
+        <nav id="nav">
+            <a href="../index.html">Acceuil</a>
+            <a href="../generic.html">Qui suis-je?</a>
+            <a href="../elements.html">Articles</a>
+        </nav>
+    </div>
+</header>
+<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+<section id="main">
+    <div class="inner">
+
+        <article>
+            <h2>Explorez la Magie de Python:<h3>les fondamentaux du langage</h3></h2>
+            <img src="../images/pytho_magic.jpg" alt="" width="473" height="220" style="width: 100%;">
+            <h3>Introduction</h3>
+            <p>Dans cette aventure nous découvrirons la puissance, la flexibilité et la simplicité de ce langage qui se défie les limites de la programmation traditionnelle. Python est votre allié essentiel dans la conquête de nouveaux horizons technologiques. Que vous souhaitiez manipuler d'énormes volumes de données, concevoir des applications web dynamiques ou plonger dans le domaine de l'intelligence artificielle, Python vous guide vers des sommets inattendus. Avec sa syntaxe claire et son approche intuitive, Python démocratise la programmation, ouvrant ainsi la voie à la créativité et à la logique, où chaque ligne de code est un pas de plus vers la concrétisation de vos ambitions. Dans un monde en constante évolution de la technologie, Python devient une baguette magique, offrant des possibilités infinies pour ceux qui se laissent emporter par sa magie.</p>
+
+            <h3>Variables et types de données</h3>
+            <p>En Python, les variables servent de conteneurs pour stocker différentes formes de données. Chaque variable est associée à un nom qui permet de la référencer et de manipuler sa valeur. Python est un langage dynamiquement typé, ce qui signifie que vous n'avez pas besoin de déclarer explicitement le type de variable lors de leur création ; le type est déduit automatiquement lors de l'attribution de valeurs</p>
+            <p>Ainsi nous distinguons plusieurs types primitifs de vraiable a savoir: Entiers (int) ,Flottants (float),Chaînes de caractères (str),Booléens (bool),Listes (list),Tuples (tuple) et Dictionnaires (dict)</p>
+            <h4>Types de données en Python</h4>
+            <ul>
+                <li>
+                   <article>
+        <h5><code>int</code> : pour les nombres entiers</h5>
+        <p>Les nombres entiers sont des nombres entiers positifs ou négatifs sans partie décimale.</p>
+        <pre><code class="python">
+# Exemple d'utilisation d'un entier
+x = 10
+print(x)  # Affiche 10
+        </code></pre>
+    </article>
+
+    <article>
+        <h5><code>float</code> : pour les nombres décimaux</h5>
+        <p>Les nombres décimaux sont des nombres avec une partie décimale.</p>
+        <pre><code class="python">
+# Exemple d'utilisation d'un nombre décimal
+pi = 3.14
+print(pi)  # Affiche 3.14
+        </code></pre>
+    </article>
+
+    <article>
+        <h5><code>str</code> : pour les chaînes de caractères</h5>
+        <p>Les chaînes de caractères représentent du texte.</p>
+        <pre><code class="python">
+# Exemple d'utilisation d'une chaîne de caractères
+name = "Afdel"
+print(name)  # Affiche Alice
+        </code></pre>
+    </article>
+
+    <article>
+        <h5><code>bool</code> : pour les valeurs booléennes (True ou False)</h5>
+        <p>Les valeurs booléennes représentent le vrai (True) et ou le faux (False).</p>
+        <pre><code class="python">
+# Exemple d'utilisation d'une valeur booléenne
+is_student = True
+print(is_student)  # Affiche True
+        </code></pre>
+    </article>
+
+        <article>
+            <h5><code>list</code> : pour les listes ordonnées d'éléments</h5>
+            <p>Les listes sont des collections ordonnées et modifiables d'éléments.</p>
+            <pre><code class="python">
+    # Exemple d'utilisation d'une liste
+    numbers = [1, 2, 3, 4, 5]
+    print(numbers)  # Affiche [1, 2, 3, 4, 5]
+            </code></pre>
+        </article>
+
+        <article>
+            <h5><code>tuple</code> : pour les tuples, des séquences immuables d'éléments</h5>
+            <p>Les tuples sont des collections immuables d'éléments ordonnés.</p>
+            <pre><code class="python">
+    # Exemple d'utilisation d'un tuple
+    point = (10, 20)
+    print(point)  # Affiche (10, 20)
+            </code></pre>
+        </article>
+
+        <article>
+            <h5><code>dict</code> : pour les dictionnaires, des paires clé-valeur</h5>
+            <p>Les dictionnaires sont des collections associatives d'éléments.</p>
+            <pre><code class="python">
+    # Exemple d'utilisation d'un dictionnaire
+    person = {'name': 'Alice', 'age': 25}
+    print(person)  # Affiche {'name': 'Alice', 'age': 25}
+            </code></pre>
+        </article>
+
+        <article>
+            <h5><code>set</code> : pour les ensembles, des collections non ordonnées d'éléments uniques</h5>
+            <p>Les ensembles sont des collections non ordonnées d'éléments uniques.</p>
+            <pre><code class="python">
+    # Exemple d'utilisation d'un ensemble
+    unique_numbers = {1, 2, 3, 4, 5}
+    print(unique_numbers)  # Affiche {1, 2, 3, 4, 5}
+            </code></pre>
+        </article>
+                <!-- Ajoutez les autres types de données ici -->
+            </ul>
+
+            <h3>Structures de contrôle en Python</h3>
+            <p>Python offre diverses structures de contrôle pour gérer le flux d'exécution du programme :</p>
+            <ul>
+                <li>
+                    <h5><code>if</code> : pour exécuter du code conditionnellement</h5>
+                    <p>L'instruction <code>if</code> permet d'exécuter du code uniquement si une condition est vraie.</p>
+                    <pre><code class="python"># Exemple d'utilisation de la structure if
+x = 10
+if x > 0:
+    print("x est positif")
+else:
+    print("x est négatif")</code></pre>
+                </li>
+                <article>
+
+            <ul>
+                <section id="structures-de-controle">
+        <h3>Structures de contrôle en Python</h3>
+        <p>Python offre diverses structures de contrôle pour gérer le flux d'exécution du programme :</p>
+        <article>
+            <h5><code>if</code> : pour exécuter du code conditionnellement</h5>
+            <p>L'instruction <code>if</code> permet d'exécuter du code uniquement si une condition est vraie.</p>
+            <pre><code class="python">
+if condition:
+# Code à exécuter si la condition est vraie
+elif autre_condition:
+# Code à exécuter si une autre condition est vraie
+else:
+# Code à exécuter si aucune condition n'est vraie
+
+            </code></pre>
+            <pre><code class="python">
+# Exemple d'utilisation de la structure if
+x = 10
+if x > 0:
+    print("x est positif")
+elif x = 0:
+    prin("x est nul")
+else:
+    print("x est négatif")
+            </code></pre>
+
+            <h5><code>for</code> : pour parcourir des séquences</h5>
+            <p>L'instruction <code>for</code> permet de parcourir des séquences comme les listes, les tuples ou les chaînes de caractères.</p>
+            <pre><code class="python">
+    # Exemple d'utilisation de la boucle for
+    numbers = [1, 2, 3, 4, 5]
+    for num in numbers:
+        print(num)
+            </code></pre>
+
+            <h4><code>while</code> : pour exécuter une boucle tant qu'une condition est vraie</h4>
+            <p>L'instruction <code>while</code> permet d'exécuter une boucle tant qu'une condition est vraie.</p>
+            <pre><code class="python">
+    # Exemple d'utilisation de la boucle while
+    count = 0
+    while count < 5:
+        print(count)
+        count += 1
+            </code></pre>
+
+
+        <article>
+            <h3>Fonctions</h3>
+            <p>Les fonctions permettent de regrouper du code réutilisable :</p>
+            <pre><code>def greet(name):
+    print("Bonjour,", name)
+
+greet("Alice")</code></pre>
+
+            <h3>Gestion des exceptions</h3>
+            <p>Python permet de gérer les erreurs à l'aide des blocs <code>try</code> et <code>except</code> :</p>
+            <pre><code>try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("Division par zéro non autorisée")</code></pre>
+        </article>
+    </div>
+</section>
+
+<footer>
+    <div class="copyright">
+        copyright: <a href="https://templated.co/">Afdel_Desmond_Kombou</a>.
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
