@@ -8,37 +8,89 @@
     <link rel="stylesheet" href="../assets/css/main.css">
     <style>
         body {
-            text-align: justify;
-            background-color: #ffffff;
-            margin: 0;
-            padding: 10px;
-        }
+    text-align: justify;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 10px;
+}
 
-        header, nav, footer, section {
-            text-align: center;
-        }
+header, nav, footer, section {
+    text-align: right;
+}
 
-        article {
-            text-align: left;
-            margin: 20px auto;
-            max-width: 800px;
-            padding: 0 20px;
-            background-color: #f2f2f2;
-        }
+article {
+    text-align: left;
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 0 20px;
+    background-color: #f2f2f2;
+}
+
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 10px 8px 10px 16px;
+    text-decoration: none;
+    font-size: 10px;
+    color: #818181;
+    display: block;
+    text-align: left;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+#main {
+    width: calc(100% - 100px); /* Largeur de la fenêtre moins la largeur de la barre latérale */
+    margin-left: 150px; /* Décalage vers la droite égal à la largeur de la barre latérale */
+    padding: 0;
+}
+
+footer {
+    position: fixed;
+    bottom: 10;
+    width: calc(100% - 100px); /* Largeur de la fenêtre moins la largeur de la barre latérale */
+    padding: 0px;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
     </style>
 </head>
 <body>
 
 <header id="header">
-    <div class="inner">
-        <a href="../index.html" class="logo">Discotech</a>
-        <nav id="nav">
-            <a href="../index.html">Acceuil</a>
-            <a href="../generic.html">Qui suis-je?</a>
-            <a href="../elements.html">Articles</a>
-        </nav>
+        <div class="inner">
+            <a href="../index.html" class="logo">Discotech by ADes<br></a>
+            <nav id="nav">
+                <a href="../index.html">Acceuil</a>
+                <a href="../apropos.html">Qui suis-je?</a>
+                <a href="../articles.html">Articles</a>
+            </nav>
+        </div>
+    </header>
+    <!-- Navbar verticale à gauche -->
+    <div class="sidenav"><br><br><br>
+        <h6>Table Des Matières</h6>
+        <a href="#Introduction">Introduction</a>
+        <a href="#Variables et types de données">Types de données</a>
+        <a href="#Structures de contrôle en Python">Structures de contrôle</a>
+        <a href="#fonctions primitives">Fonctions Primitives</a>
+        <a href="#gestion-des-exceptions">Gestion des exceptions</a>
     </div>
-</header>
+
+
 <a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 
 <section id="main">
@@ -47,18 +99,23 @@
         <article>
             <h2>Explorez la Magie de Python:<h3>les fondamentaux du langage</h3></h2>
             <img src="../images/pytho_magic.jpg" alt="" width="473" height="220" style="width: 100%;">
-            <h3>Introduction</h3>
+            <h3 id="Introduction">Introduction</h3>
             <p>Dans cette aventure nous découvrirons la puissance, la flexibilité et la simplicité de ce langage qui se défie les limites de la programmation traditionnelle. Python est votre allié essentiel dans la conquête de nouveaux horizons technologiques. Que vous souhaitiez manipuler d'énormes volumes de données, concevoir des applications web dynamiques ou plonger dans le domaine de l'intelligence artificielle, Python vous guide vers des sommets inattendus. Avec sa syntaxe claire et son approche intuitive, Python démocratise la programmation, ouvrant ainsi la voie à la créativité et à la logique, où chaque ligne de code est un pas de plus vers la concrétisation de vos ambitions. Dans un monde en constante évolution de la technologie, Python devient une baguette magique, offrant des possibilités infinies pour ceux qui se laissent emporter par sa magie.</p>
 
             <h3>Variables et types de données</h3>
             <p>En Python, les variables servent de conteneurs pour stocker différentes formes de données. Chaque variable est associée à un nom qui permet de la référencer et de manipuler sa valeur. Python est un langage dynamiquement typé, ce qui signifie que vous n'avez pas besoin de déclarer explicitement le type de variable lors de leur création ; le type est déduit automatiquement lors de l'attribution de valeurs</p>
-            <p>Ainsi nous distinguons plusieurs types primitifs de vraiable a savoir: Entiers (int) ,Flottants (float),Chaînes de caractères (str),Booléens (bool),Listes (list),Tuples (tuple) et Dictionnaires (dict)</p>
+            <p>Ainsi nous distinguons plusieurs types primitifs de vraiable a savoir:<li>Entiers ou Integer <code>int</code> <li>Décimaux ou Flottants <code>float</code> <li>Chaînes de caractères <code>str</code><li>Booléens <code>bool</code></li><li>Listes <code>list</code></li><li>Tuples <code>tuple</code></li><li> Dictionnaires <code>dict</code></li></p>
+            <p>aque type de données a ses propres méthodes et opérations associées. Nous illustrons ci-dessous quelques exemples d'utilisation avec des cas concrets.</p>
             <h4>Types de données en Python</h4>
+            <p>Python prend en charge plusieurs types de données primitifs, notamment</p>
             <ul>
                 <li>
-                   <article>
+
+
+    <article>
         <h5><code>int</code> : pour les nombres entiers</h5>
         <p>Les nombres entiers sont des nombres entiers positifs ou négatifs sans partie décimale.</p>
+        <code>Exemple :</code>
         <pre><code class="python">
 # Exemple d'utilisation d'un entier
 x = 10
@@ -69,6 +126,7 @@ print(x)  # Affiche 10
     <article>
         <h5><code>float</code> : pour les nombres décimaux</h5>
         <p>Les nombres décimaux sont des nombres avec une partie décimale.</p>
+        <code>Exemple :</code>
         <pre><code class="python">
 # Exemple d'utilisation d'un nombre décimal
 pi = 3.14
@@ -79,16 +137,18 @@ print(pi)  # Affiche 3.14
     <article>
         <h5><code>str</code> : pour les chaînes de caractères</h5>
         <p>Les chaînes de caractères représentent du texte.</p>
+        <code>Exemple :</code>
         <pre><code class="python">
 # Exemple d'utilisation d'une chaîne de caractères
 name = "Afdel"
-print(name)  # Affiche Alice
+print(name)  # Affiche Afdel
         </code></pre>
     </article>
 
     <article>
         <h5><code>bool</code> : pour les valeurs booléennes (True ou False)</h5>
         <p>Les valeurs booléennes représentent le vrai (True) et ou le faux (False).</p>
+        <code>Exemple :</code>
         <pre><code class="python">
 # Exemple d'utilisation d'une valeur booléenne
 is_student = True
@@ -98,22 +158,97 @@ print(is_student)  # Affiche True
 
         <article>
             <h5><code>list</code> : pour les listes ordonnées d'éléments</h5>
-            <p>Les listes sont des collections ordonnées et modifiables d'éléments.</p>
+            <p>Les listes en Python sont des structures de données polyvalentes et puissantes qui vous permettent de stocker et de manipuler des collections d'éléments de manière efficace.</p>
+            <h6>Création d'une Liste</h6>
+            <p>En Python, une liste est définie en utilisant des crochets [] et en séparant les éléments par des virgules. Voici un exemple de création d'une liste contenant des nombres entiers </p>
+            <code>Exemple :</code>
             <pre><code class="python">
-    # Exemple d'utilisation d'une liste
-    numbers = [1, 2, 3, 4, 5]
-    print(numbers)  # Affiche [1, 2, 3, 4, 5]
+# création d'une liste vide
+liste_vide = []
+
+#liste de chiffres
+notes = [18, 20, 13, 17, 15]
+print(numbers)    # Affiche [1, 2, 3, 4, 5]
+
+# Une liste peut aussi prendre des elements de plusieurs types
+prenom ="Desmond"
+age = 22
+taille = 1.68
+notes = [13, 13, 15,11]
+statut_etiduant = True
+
+afdel= [prenom,age,taille,notes,statut_etiduant]
+print(afdel)    # Affiche ['Desmond', 23, 1.68, [13, 13, 15, 11], True]
             </code></pre>
+            <h6>Manipulations sur les listes</h6>
+            <p></p>
         </article>
 
         <article>
             <h5><code>tuple</code> : pour les tuples, des séquences immuables d'éléments</h5>
-            <p>Les tuples sont des collections immuables d'éléments ordonnés.</p>
+            <p>Les tuples sont des structures de données similaires aux listes, mais avec une différence principale : ils sont immuables, ce qui signifie qu'une fois créés, ils ne peuvent pas être modifiés.</p>
+            <P>Les tuples sont des collections ordonnées d'éléments, similaires aux listes, mais définies en utilisant des parenthèses () au lieu de crochets [].</P>
+            <code>Exemple :</code>
             <pre><code class="python">
-    # Exemple d'utilisation d'un tuple
-    point = (10, 20)
-    print(point)  # Affiche (10, 20)
+# Définition d'un tuple
+mon_tuple = (1, 2, 3, 'a', 'b', 'c')
+
+# Accès aux éléments du tuple
+print(mon_tuple[0])  # Affiche : 1
+print(mon_tuple[3])  # Affiche : 'a'
             </code></pre>
+            <H6>Propriétés des Tuples</H6>
+            <P>-Les tuples sont immuables, ce qui signifie qu'une fois créés, ils ne peuvent pas être modifiés.<br>
+            -Ils peuvent contenir des éléments de types différents.<br>
+            -Les opérations comme l'indexation et la concaténation sont applicables aux tuples.</P>
+            <code>Exemple :</code>
+            <pre><code class="python">
+# Concaténation de tuples
+tuple1 = (1, 2, 3)
+tuple2 = ('a', 'b', 'c')
+concatenation = tuple1 + tuple2
+print(concatenation)
+# Affiche : (1, 2, 3, 'a', 'b', 'c')
+            </code></pre>
+            <h6> Utilisation des Tuples</h6>
+            <p>-Les tuples sont utilisés pour stocker des collections d'éléments immuables.<br>
+            -Ils sont souvent utilisés pour représenter des enregistrements de données avec des champs fixes.<br>
+            -Les tuples sont également utilisés dans certains cas où la sécurité des données est importante car ils ne peuvent pas être modifiés accidentellement.</p>
+            <pre><code class="python">
+# Déclaration d'un tuple représentant un point en 2D
+point = (3, 4)
+
+# Accès aux coordonnées du point
+x, y = point
+print("Coordonnées x :", x)  # Affiche : Coordonnées x : 3
+print("Coordonnées y :", y)  # Affiche : Coordonnées y : 4
+
+            </code></pre>
+            <h6>quelques Opérations sur les Tuples</h6>
+            <code>1. Concaténation de Tuples</code>
+            <p>Les tuples peuvent être concaténés à l'aide de l'opérateur +, ce qui crée un nouveau tuple contenant les éléments des tuples d'origine.</p>
+            <pre><code class="python">
+tuple1 = (1, 2, 3)
+tuple2 = ('a', 'b', 'c')
+concatenation = tuple1 + tuple2
+print(concatenation)  # Affiche : (1, 2, 3, 'a', 'b', 'c')
+            </code></pre>
+            <code>2. Répétition de Tuples</code>
+            <p>Vous pouvez répéter un tuple en utilisant l'opérateur *, ce qui crée une nouvelle tuple contenant des répétitions du tuple d'origine.</p>
+            <pre><code class="python">
+tuple1 = ('a', 'b')
+repetition = tuple1 * 3
+print(repetition)  # Affiche : ('a', 'b', 'a', 'b', 'a', 'b')
+            </code></pre>
+            <code>3. Indexation et Slicing</code>
+            <p>Les tuples supportent l'indexation et le slicing pour accéder aux éléments individuels ou à des sous-groupes d'éléments.</p>
+            <pre><code class="python">
+
+            </code></pre>
+            <pre><code class="python">
+
+            </code></pre>
+
         </article>
 
         <article>
@@ -135,26 +270,7 @@ print(is_student)  # Affiche True
     print(unique_numbers)  # Affiche {1, 2, 3, 4, 5}
             </code></pre>
         </article>
-                <!-- Ajoutez les autres types de données ici -->
-            </ul>
 
-            <h3>Structures de contrôle en Python</h3>
-            <p>Python offre diverses structures de contrôle pour gérer le flux d'exécution du programme :</p>
-            <ul>
-                <li>
-                    <h5><code>if</code> : pour exécuter du code conditionnellement</h5>
-                    <p>L'instruction <code>if</code> permet d'exécuter du code uniquement si une condition est vraie.</p>
-                    <pre><code class="python"># Exemple d'utilisation de la structure if
-x = 10
-if x > 0:
-    print("x est positif")
-else:
-    print("x est négatif")</code></pre>
-                </li>
-                <article>
-
-            <ul>
-                <section id="structures-de-controle">
         <h3>Structures de contrôle en Python</h3>
         <p>Python offre diverses structures de contrôle pour gérer le flux d'exécution du programme :</p>
         <article>
@@ -201,26 +317,42 @@ else:
 
 
         <article>
-            <h3>Fonctions</h3>
+            <h3 id="fonctions">Fonctions</h3>
             <p>Les fonctions permettent de regrouper du code réutilisable :</p>
             <pre><code>def greet(name):
-    print("Bonjour,", name)
+print("Bonjour,", name)
 
-greet("Alice")</code></pre>
+greet("Afdel")</code></pre>
+        </article>
 
             <h3>Gestion des exceptions</h3>
-            <p>Python permet de gérer les erreurs à l'aide des blocs <code>try</code> et <code>except</code> :</p>
-            <pre><code>try:
+            <p>La gestion des exceptions permet de gérer les erreurs et les situations imprévues qui peuvent survenir lors de l'exécution d'un programme.</p>
+            <pre><code># Division par zéro
+try:
     result = 10 / 0
 except ZeroDivisionError:
-    print("Division par zéro non autorisée")</code></pre>
+    print("Division par zéro non autorisée")
+
+# Tentative d'accès à un index inexistant dans une liste
+try:
+    numbers = [1, 2, 3]
+    print(numbers[4])
+except IndexError:
+    print("Index en dehors des limites de la liste")
+
+# Conversion de chaîne de caractères en entier
+try:
+    num = int("abc")
+except ValueError:
+    print("Conversion de chaîne en entier impossible")
+</code></pre>
         </article>
-    </div>
+        </ul></div>
 </section>
 
 <footer>
     <div class="copyright">
-        copyright: <a href="https://templated.co/">Afdel_Desmond_Kombou</a>.
+        copyright: Afdel_Desmond_Kombou</a>.
     </div>
 </footer>
 
