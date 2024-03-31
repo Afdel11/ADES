@@ -1,78 +1,120 @@
 <!DOCTYPE HTML>
-<html>
+<!--
+	by Afdel D
+--><html>
 <head>
-    <title>La magie de Python</title>
-    <meta charset="utf-8">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="../assets/css/main.css">
-    <style>
-        body {
-            text-align: justify;
-            background-color: #ffffff;
-            margin: 0;
-            padding: 10px;
-        }
-
-        header, nav, footer, section {
-            text-align: center;
-        }
-
-        article {
-            text-align: left;
-            margin: 20px auto;
-            max-width: 800px;
-            padding: 0 20px;
-            background-color: #f2f2f2;
-        }
-
-        /* Style pour la navbar verticale */
-        .sidenav {
-            height: 100%;
-            width: 400px;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: #111;
-            overflow-x: hidden;
-            padding-top: 20px;
-        }
-
-        .sidenav a {
-            padding: 10px 8px 10px 16px;
-            text-decoration: none;
-            font-size: 20px;
-            color: #818181;
-            display: block;
-        }
-
-        .sidenav a:hover {
-            color: #f1f1f1;
-        }
-         /* Ajustement des marges pour centrer le contenu */
-        #main {
-            margin-left: 220px; /* Marge à gauche pour la navbar */
-            width: calc(100% - 220px); /* Largeur ajustée en fonction de la largeur de la navbar */
-        }
-    </style>
+	<title>Discotech</title>
+	<meta charset="utf-8">
+	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-    <h1>Comprendre le Concept de Big Data et les Outils Primordiaux pour la Manipuler</h1>
-    <p>Dans l'ère numérique actuelle, l'accumulation exponentielle de données a donné naissance à un domaine passionnant et en constante évolution : le Big Data. Ce concept fait référence à la gestion et à l'analyse de vastes ensembles de données qui dépassent la capacité des outils de gestion de données traditionnels. Mais qu'est-ce qui rend les données "big", et quels sont les outils essentiels pour les manipuler efficacement ?</p>
 
-    <h2>Qu'est-ce que le Big Data ?</h2>
-    <p>Le Big Data se caractérise par trois principaux V : Volume, Variété et Vélocité. Tout d'abord, le volume fait référence à la quantité massive de données générées chaque seconde à partir de diverses sources telles que les médias sociaux, les transactions en ligne, les appareils connectés et les capteurs IoT. Ensuite, la variété désigne la diversité des formats de données, allant des textes non structurés aux images, aux vidéos et aux données géospatiales. Enfin, la vélocité se réfère à la vitesse à laquelle ces données sont générées et doivent être traitées en temps réel pour prendre des décisions efficaces.</p>
+<!-- Header -->
+<header id="header"><div class="inner">
+		<a href="index.html" class="logo">Discotech</a>
+		<nav id="nav"><a href="index.html">Acceuil</a>
+			<a href="apropos.html">Qui suis je?</a>
+			<a href="articles.html">Articles</a>
+		</nav></div>
+</header><a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 
-    <h2>Les Outils Primordiaux pour le Big Data</h2>
-    <ol>
-        <li><strong>Hadoop :</strong> Hadoop est un framework open source qui permet le stockage distribué et le traitement parallèle de données massives sur des clusters de serveurs. Il comprend le système de fichiers Hadoop (HDFS) pour le stockage et MapReduce pour le traitement.</li>
-        <li><strong>Apache Spark :</strong> Spark est un moteur de traitement de données en mémoire qui offre des performances supérieures à celles de MapReduce. Il prend en charge le traitement par lots, en temps réel, le traitement de graphiques et l'apprentissage automatique.</li>
-        <li><strong>NoSQL Databases :</strong> Contrairement aux bases de données relationnelles traditionnelles, les bases de données NoSQL sont conçues pour gérer efficacement les données non structurées et semi-structurées à grande échelle. Des exemples incluent MongoDB, Cassandra et HBase.</li>
-        <li><strong>Apache Kafka :</strong> Kafka est une plateforme de streaming distribuée utilisée pour la diffusion de données en temps réel et la construction de pipelines de données évolutifs. Il est souvent utilisé pour l'intégration de données entre les applications et les systèmes.</li>
-        <li><strong>Python et R :</strong> Python et R sont des langages de programmation couramment utilisés pour l'analyse de données, la manipulation et la visualisation. Ils offrent une grande variété de bibliothèques et de packages spécialisés pour le Big Data, tels que Pandas, NumPy, TensorFlow et Scikit-learn.</li>
-    </ol>
 
-    <p>En conclusion, le Big Data offre un potentiel énorme pour les organisations qui souhaitent tirer parti de leurs données pour prendre des décisions stratégiques et innovantes. Comprendre les concepts clés du Big Data et maîtriser les outils essentiels sont des étapes cruciales pour exploiter pleinement le pouvoir des données à l'ère numérique.</p>
-</body>
-</html>
+<!-- Banniere -->
+<section id="banner"><div class="inner">
+		<h1>Discotech:</h1>
+		<h3> <span>Discover Code and tech with Afdel / Decouvre le code et la Tech avec Afdel<br></span></h3>
+</div></section>
+
+
+<!-- One -->
+<section id="one"><div class="inner">
+	<header><h3>Articles recents</h3>
+	</header><p>Voici les articles les plus récents sur notre blog. Découvrez les dernières tendances, tutoriels et astuces pour rester à jour dans le monde de la technologie et du développement.</p>
+</div></section>
+
+
+
+<!-- Two -->
+<section id="two">
+	<div class="inner">
+        <article><div class="content">
+            <header><h3>La magie de Python:<h4>les fondamentaux</h4></h3>
+            </header><div class="image fit">
+            <img src="images/pytho_magic.jpg" alt="" width="473" height="220"></div>
+			<h6>publié le 23-12-2023 </h6>
+            <p>Explorons les concepts de base de la programmation en Python et met en lumière les merveilles de ce langage de programmation polyvalent et puissant.</p>
+        	<ul class="actions"><li><a href="mes articles/La magie de python.html" class="button alt">lire l'article</a></li>
+		</div></article>
+
+        <article class="alt"><div class="content">
+            <header><h3>Web Scraping I: <h4>les expressions regulière</h4></h3>
+            </header><div class="image fit">
+            <img src="images/pytho_magic.jpg" alt="" width="473" height="220"></div>
+			<h6>publié le 17-01-2024 </h6>
+            <p>Explorez notre guide complet sur le Web Scraping I, où nous plongeons dans le monde des expressions régulières et leur utilisation dans l'extraction de données à partir de pages web.</p>
+        	<ul class="actions"><li><a href="#" class="button alt">En cours...</a></li>
+		</div></article>
+
+        <article class="alt"><div class="content">
+            <header><h3>Web Scraping II: <h4>Beautiful Soup</h4></h3>
+            </header><div class="image fit">
+            <img src="images/bs4.jpeg" alt="" width="173" height="220"></div>
+            <p>Poursuivons notre exploration approfondie du Web Scraping, où nous plongeons dans l'utilisation puissante de Beautiful Soup pour extraire des données structurées à partir de pages web avec facilité et efficacité.</p>
+        	<ul class="actions"><li><a href="#" class="button alt">En cours...</a></li>
+		</div></article>
+	</div>
+</section>
+<!-- Two -->
+<section id="two">
+	<div class="inner">
+        <article><div class="content">
+            <header><h3>La magie de Python:<h4>les fondamentaux</h4></h3>
+            </header><div class="image fit">
+            <img src="images/pytho_magic.jpg" alt="" width="473" height="220"></div>
+			<h6>publié le 23-12-2023 </h6>
+            <p>Explorons les concepts de base de la programmation en Python et met en lumière les merveilles de ce langage de programmation polyvalent et puissant.</p>
+        	<ul class="actions"><li><a href="mes articles/La magie de python.html" class="button alt">lire l'article</a></li>
+		</div></article>
+
+        <article class="alt"><div class="content">
+            <header><h3>Web Scraping I: <h4>les expressions regulière</h4></h3>
+            </header><div class="image fit">
+            <img src="images/pytho_magic.jpg" alt="" width="473" height="220"></div>
+			<h6>publié le 17-01-2024 </h6>
+            <p>Explorez notre guide complet sur le Web Scraping I, où nous plongeons dans le monde des expressions régulières et leur utilisation dans l'extraction de données à partir de pages web.</p>
+        	<ul class="actions"><li><a href="#" class="button alt">En cours...</a></li>
+		</div></article>
+
+        <article class="alt"><div class="content">
+            <header><h3>Web Scraping II: <h4>Beautiful Soup</h4></h3>
+            </header><div class="image fit">
+            <img src="images/bs4.jpeg" alt="" width="173" height="220"></div>
+            <p>Poursuivons notre exploration approfondie du Web Scraping, où nous plongeons dans l'utilisation puissante de Beautiful Soup pour extraire des données structurées à partir de pages web avec facilité et efficacité.</p>
+        	<ul class="actions"><li><a href="#" class="button alt">En cours...</a></li>
+		</div></article>
+	</div>
+</section>
+
+
+
+<!-- Three -->
+<section id="three"><div class="inner">
+		<article><div class="content">
+				<span class="icon fa-laptop"></span>
+				<header><h3>Projets</h3>
+				</header><p>Découvrez mes contributions récentes et explorez les projets auxquels j'ai participé. Parcourez-les pour en savoir plus sur mes collaborations et réalisations</p>
+				<ul class="actions"><li><a href="#" class="button alt">En cours..</a></li>
+				</ul></div>
+
+		</article></div>
+</section>
+
+
+<!-- footer -->
+</section><div class="copyright">
+copyright: <a href="https://templated.co/">Afdel_Desmond_Kombou</a>.
+</div>
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script><script src="assets/js/skel.min.js"></script><script src="assets/js/util.js"></script><script src="assets/js/main.js"></script></body></html>
