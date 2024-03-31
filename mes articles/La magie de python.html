@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="stylesheet" href="../assets/css/main.css">
     <style>
-        body {
+    body {
     text-align: justify;
     background-color: #ffffff;
     margin: 0;
@@ -28,7 +28,7 @@ article {
 
 .sidenav {
     height: 100%;
-    width: 210px;
+    width: 210px; /* Largeur initiale pour les grands écrans */
     position: fixed;
     z-index: 1;
     top: 0;
@@ -52,21 +52,50 @@ article {
 }
 
 #main {
-    width: calc(100% - 100px); /* Largeur de la fenêtre moins la largeur de la barre latérale */
-    margin-left: 150px; /* Décalage vers la droite égal à la largeur de la barre latérale */
+    width: calc(100% - 210px); /* Largeur initiale pour les grands écrans */
+    margin-left: 210px; /* Décalage initiale pour les grands écrans */
     padding: 0;
 }
 
 footer {
     position: fixed;
-    bottom: 10;
-    width: calc(100% - 100px); /* Largeur de la fenêtre moins la largeur de la barre latérale */
-    padding: 0px;
+    bottom: 0;
+    width: 100%; /* Largeur complète pour une meilleure visibilité */
+    padding: 10px 0; /* Ajout d'un peu de padding pour l'esthétique */
     background-color: #f2f2f2;
     text-align: center;
 }
 
-    </style>
+/* Media Query pour les écrans jusqu'à 600px */
+@media screen and (max-width: 600px) {
+    .sidenav {
+        width: 100%; /* La barre latérale prend toute la largeur */
+        height: auto; /* Hauteur auto pour contenir tous les liens */
+        position: relative; /* Position relative pour ne pas gêner le contenu */
+    }
+
+    .sidenav a {
+        font-size: 12px; /* Taille de police ajustée */
+    }
+
+    #main {
+        width: 100%; /* La zone principale prend toute la largeur */
+        margin-left: 0; /* Plus de décalage nécessaire */
+    }
+
+    article {
+        /* Adaptation de la largeur et du padding pour les petits écrans */
+        margin: 10px auto;
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    footer {
+        width: 100%; /* Assure que le footer prend toute la largeur */
+        bottom: 0; /* Aligné au bas */
+    }
+}
+ </style>
 </head>
 <body>
 
@@ -103,6 +132,7 @@ footer {
 
 
         <a href="#fonctions primitives">Fonctions Primitives</a>
+        <a href ="#ensembles"><li>Ensembles <code>set</code></li></a>
 
 
         <a href="#gestion-des-exceptions">Gestion des exceptions</a>
@@ -570,27 +600,27 @@ while count < 5:
     print("Bonjour,", name)
 greet("Afdel")</code></pre>
 
-    <h3 id="fonction-print">Fonction <code>print()</code></h3>
+    <h6 id="fonction-print">Fonction <code>print()</code></h6>
     <p>La fonction <code>print()</code> est utilisée pour afficher du texte ou d'autres objets sur la sortie standard (généralement la console). Elle prend en charge plusieurs arguments et peut afficher des chaînes de caractères, des nombres, des variables, etc.</p>
     <pre><code>print("Hello, World!")</code></pre>
 
-    <h3 id="fonction-input">Fonction <code>input()</code></h3>
+    <h6 id="fonction-input">Fonction <code>input()</code></h6>
     <p>La fonction <code>input()</code> est utilisée pour obtenir une entrée de l'utilisateur depuis la console. Elle affiche un message facultatif, puis attend que l'utilisateur saisisse une valeur au clavier. La valeur saisie est généralement stockée dans une variable pour une utilisation ultérieure.</p>
     <pre><code>nom = input("Entrez votre nom : ")
 print("Bonjour,", nom)</code></pre>
 
-    <h3 id="fonction-len">Fonction <code>len()</code></h3>
+    <h6 id="fonction-len">Fonction <code>len()</code></h6>
     <p>La fonction <code>len()</code> est utilisée pour obtenir la longueur d'un objet. Elle peut être utilisée avec des chaînes de caractères, des listes, des tuples, des dictionnaires et d'autres types d'objets qui prennent en charge la notion de longueur.</p>
     <pre><code>ma_liste = [1, 2, 3, 4, 5]
 longueur = len(ma_liste)
 print("La longueur de la liste est :", longueur)</code></pre>
 
-    <h3 id="fonction-help">Fonction <code>help()</code></h3>
+    <h6 id="fonction-help">Fonction <code>help()</code></h6>
     <p>La fonction <code>help()</code> est utilisée pour obtenir de l'aide sur les objets, les modules, les fonctions, les classes, etc. Elle affiche la documentation associée à l'objet spécifié.</p>
     <pre><code>help(list)</code></pre>
 
 
-    <h3 id="fonction-range">Fonction <code>range()</code></h3>
+    <h6 id="fonction-range">Fonction <code>range()</code></h6>
     <p>La fonction <code>range()</code> est utilisée pour générer une séquence de nombres. Elle peut prendre un seul argument (fin), deux arguments (début, fin) ou trois arguments (début, fin, pas).</p>
     <pre><code>for i in range(5):
     print(i)
