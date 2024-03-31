@@ -1,3 +1,3 @@
-# Exemple d'utilisation d'une chaîne de caractères
-name = "Afdel"
-print(name)  # Affiche 'Afdel'
+# Exemple d'utilisation de la boucle for
+nombre = {"nom": "afdel", "prenom":"desmond", "nom":"edite"}
+print(nombre)

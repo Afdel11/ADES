@@ -28,7 +28,7 @@ article {
 
 .sidenav {
     height: 100%;
-    width: 200px;
+    width: 210px;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -83,10 +83,28 @@ footer {
     <!-- Navbar verticale à gauche -->
     <div class="sidenav"><br><br><br>
         <h6>Table Des Matières</h6>
-        <a href="#Introduction">Introduction</a>
-        <a href="#Variables et types de données">Types de données</a>
-        <a href="#Structures de contrôle en Python">Structures de contrôle</a>
+        <a href="#Introduction"><h6>Introduction</h6></a>
+        <a href="#Variables et types de données"><h5>Types de données</h5></a>
+        <a href ="#Entiers ou Integer"><li>Entiers ou Integer<code>int</code></li></a>
+        <a href ="#Décimaux ou Flottants"><li>Décimaux ou Flottants<code>float</code></li></a>
+        <a href ="#Chaînes de caractères"><li>Chaînes de caractères<code>str</code></li></a>
+        <a href ="#Booléens"><li>Booléens <code>bool</code></li></a>
+        <a href ="#Listes"><li>Listes <code>list</code></li></a>
+        <a href ="#Tuples"><li>Tuples <code>tuple</code></li></a>
+        <a href ="#Dictionnaires"><li>Dictionnaires <code>dict</code></li></a>
+        <a href ="#ensembles"><li>Ensembles <code>set</code></li></a>
+
+        <a href="#Structures de contrôle en Python"><h6>Structures de contrôle</h6></h6></a>
+        <a href ="#L'instruction "><li>L'instruction <code>if</code></li></a>
+        <a href ="#Listes"><li>Listes <code>list</code></li></a>
+        <a href ="#Tuples"><li>Tuples <code>tuple</code></li></a>
+        <a href ="#Dictionnaires"><li>Dictionnaires <code>dict</code></li></a>
+        <a href ="#ensembles"><li>Ensembles <code>set</code></li></a>
+
+
         <a href="#fonctions primitives">Fonctions Primitives</a>
+
+
         <a href="#gestion-des-exceptions">Gestion des exceptions</a>
     </div>
 
@@ -95,14 +113,15 @@ footer {
 
 <section id="main">
     <div class="inner">
-
+<!-- INTRODUCTION -->
         <article>
             <h2>Explorez la Magie de Python:<h3>les fondamentaux du langage</h3></h2>
             <img src="../images/pytho_magic.jpg" alt="" width="473" height="220" style="width: 100%;">
             <h3 id="Introduction">Introduction</h3>
             <p>Dans cette aventure nous découvrirons la puissance, la flexibilité et la simplicité de ce langage qui se défie les limites de la programmation traditionnelle. Python est votre allié essentiel dans la conquête de nouveaux horizons technologiques. Que vous souhaitiez manipuler d'énormes volumes de données, concevoir des applications web dynamiques ou plonger dans le domaine de l'intelligence artificielle, Python vous guide vers des sommets inattendus. Avec sa syntaxe claire et son approche intuitive, Python démocratise la programmation, ouvrant ainsi la voie à la créativité et à la logique, où chaque ligne de code est un pas de plus vers la concrétisation de vos ambitions. Dans un monde en constante évolution de la technologie, Python devient une baguette magique, offrant des possibilités infinies pour ceux qui se laissent emporter par sa magie.</p>
 
-            <h3>Variables et types de données</h3>
+<!-- VARIABLES ET TYPES -->
+            <h3 id ="Variables et types de données">Variables et types de données</h3>
             <p>En Python, les variables servent de conteneurs pour stocker différentes formes de données. Chaque variable est associée à un nom qui permet de la référencer et de manipuler sa valeur. Python est un langage dynamiquement typé, ce qui signifie que vous n'avez pas besoin de déclarer explicitement le type de variable lors de leur création ; le type est déduit automatiquement lors de l'attribution de valeurs</p>
             <p>Ainsi nous distinguons plusieurs types primitifs de vraiable a savoir:<li>Entiers ou Integer <code>int</code> <li>Décimaux ou Flottants <code>float</code> <li>Chaînes de caractères <code>str</code><li>Booléens <code>bool</code></li><li>Listes <code>list</code></li><li>Tuples <code>tuple</code></li><li> Dictionnaires <code>dict</code></li></p>
             <p>aque type de données a ses propres méthodes et opérations associées. Nous illustrons ci-dessous quelques exemples d'utilisation avec des cas concrets.</p>
@@ -113,57 +132,51 @@ footer {
 
 
     <article>
-        <h5><code>int</code> : pour les nombres entiers</h5>
+        <h5 id ="Entiers ou Integer"><code>int</code> : pour les nombres entiers</h5>
         <p>Les nombres entiers sont des nombres entiers positifs ou négatifs sans partie décimale.</p>
         <code>Exemple :</code>
-        <pre><code class="python">
-# Exemple d'utilisation d'un entier
+        <pre><code class="python"># Exemple d'utilisation d'un entier
 x = 10
-print(x)  # Affiche 10
-        </code></pre>
+print(x)  # Affiche 10</code></pre>
     </article>
 
     <article>
-        <h5><code>float</code> : pour les nombres décimaux</h5>
+        <h5 id ="Décimaux ou Flottants"><code>float</code> : pour les nombres décimaux</h5>
         <p>Les nombres décimaux sont des nombres avec une partie décimale.</p>
         <code>Exemple :</code>
-        <pre><code class="python">
-# Exemple d'utilisation d'un nombre décimal
+        <pre><code class="python"># Exemple d'utilisation d'un nombre décimal
 pi = 3.14
-print(pi)  # Affiche 3.14
-        </code></pre>
+print(pi)  # Affiche 3.14</code></pre>
     </article>
 
     <article>
-        <h5><code>str</code> : pour les chaînes de caractères</h5>
+        <h5 id ="Chaînes de caractères"><code>str</code> : pour les chaînes de caractères</h5>
         <p>Les chaînes de caractères représentent du texte.</p>
         <code>Exemple :</code>
-        <pre><code class="python">
-# Exemple d'utilisation d'une chaîne de caractères
+        <pre><code class="python"># Exemple d'utilisation d'une chaîne de caractères
 name = "Afdel"
-print(name)  # Affiche Afdel
-        </code></pre>
+print(name)  # Affiche Afdel</code></pre>
     </article>
 
     <article>
-        <h5><code>bool</code> : pour les valeurs booléennes (True ou False)</h5>
+        <h5 id ="Booléens"><code>bool</code> : pour les valeurs booléennes (True ou False)</h5>
         <p>Les valeurs booléennes représentent le vrai (True) et ou le faux (False).</p>
         <code>Exemple :</code>
-        <pre><code class="python">
-# Exemple d'utilisation d'une valeur booléenne
+        <pre><code class="python"># Exemple d'utilisation d'une valeur booléenne
 is_student = True
-print(is_student)  # Affiche True
-        </code></pre>
+print(is_student)  # Affiche True</code></pre>
     </article>
 
+<!-- STRUCTURES DE DONNEES -->
+<!-- lISTES -->
+
         <article>
-            <h5><code>list</code> : pour les listes ordonnées d'éléments</h5>
+            <h5 id ="Listes"><code>list</code> : pour les listes ordonnées d'éléments</h5>
             <p>Les listes en Python sont des structures de données polyvalentes et puissantes qui vous permettent de stocker et de manipuler des collections d'éléments de manière efficace.</p>
             <h6>Création d'une Liste</h6>
             <p>En Python, une liste est définie en utilisant des crochets [] et en séparant les éléments par des virgules. Voici un exemple de création d'une liste contenant des nombres entiers </p>
             <code>Exemple :</code>
-            <pre><code class="python">
-# création d'une liste vide
+            <pre><code class="python"># création d'une liste vide
 liste_vide = []
 
 #liste de chiffres
@@ -178,177 +191,414 @@ notes = [13, 13, 15,11]
 statut_etiduant = True
 
 afdel= [prenom,age,taille,notes,statut_etiduant]
-print(afdel)    # Affiche ['Desmond', 23, 1.68, [13, 13, 15, 11], True]
-            </code></pre>
+print(afdel)    # Affiche ['Desmond', 23, 1.68, [13, 13, 15, 11], True]</code></pre>
             <h6>Manipulations sur les listes</h6>
-            <p></p>
+            <code>1. Ajout d'éléments </code>
+            <p> Les éléments peuvent être ajouté à une liste en utilisant deux méthodes principales : append() et insert().</p>
+            <pre><code class="python"># append() : Ajoute un élément à la fin de la liste
+ma_liste = [1, 2, 3]
+ma_liste.append(4)
+print(ma_liste)  # Affiche: [1, 2, 3, 4]
+
+# insert() : Insère un élément à un index spécifique
+ma_liste = [1, 2, 3]
+ma_liste.insert(1, 5)
+print(ma_liste)  # Affiche: [1, 5, 2, 3]</code></pre>
+
+            <code>2. Suppression d'éléments </code>
+            <p>Pour supprimer des éléments d'une liste en Python, vous disposez de plusieurs méthodes, notamment : remove(), pop() et del</p>
+            <pre><code class="python"># remove() permet de supprimer la première occurrence d'une valeur spécifiée dans la liste.
+ma_liste = [1, 2, 3, 2, 4]
+ma_liste.remove(2)
+print(ma_liste)  # Affiche: [1, 3, 2, 4]
+
+# pop() permet de supprimer et de retourner l'élément à une position donnée dans la liste.
+ma_liste = [1, 2, 3, 4]
+element_supprime = ma_liste.pop(1)  # Supprime l'élément à l'index 1 (2)
+print(ma_liste)  # Output: [1, 3, 4]
+print(element_supprime)  # Affiche: 2
+
+#  également utiliser l'instruction del pour supprimer un élément ou une tranche d'éléments en spécifiant l'index ou la plage d'indices à supprimer
+ma_liste = [1, 2, 3, 4]
+del ma_liste[2]  # Supprime l'élément à l'index 2 (3)
+print(ma_liste)  # Affiche: [1, 2, 4]</code></pre>
+
+            <code>2. Recherche, comptage et trie d'élements </code>
+            <pre><code class="python"># index() retourne l'index de la première occurrence d'un élément donné.
+ma_liste = [10, 20, 30, 20]
+index = ma_liste.index(20)
+print(index)  # Affiche: 1
+
+# count() retourne le nombre d'occurrences d'un élément donné dans la liste.
+ma_liste = [10, 20, 30, 20]
+count = ma_liste.count(20)
+print(count)  # Affiche: 2
+
+# sort() trie la liste par ordre croissant
+ma_liste = [3, 1, 2]
+ma_liste.sort()
+print(ma_liste)  # Affiche: [1, 2, 3]
+
+# reverse() : Inverse l'ordre des éléments de la liste
+ma_liste = [1, 2, 3]
+ma_liste.reverse()
+print(ma_liste)  # Affiche: [3, 2, 1]</code></pre>
+            <p>Les listes sont l'une des structures de données les plus fondamentales et les plus utiles en Python. Elles offrent une grande flexibilité et sont largement utilisées dans de nombreux programmes Python. Apprenez à les maîtriser, car elles seront souvent utilisées dans vos projets de programmation.</p>
         </article>
 
+<!-- LES TUPLES -->
+
         <article>
-            <h5><code>tuple</code> : pour les tuples, des séquences immuables d'éléments</h5>
+            <h5 id ="Tuples"><code>tuple</code> : pour les tuples, des séquences immuables d'éléments</h5>
             <p>Les tuples sont des structures de données similaires aux listes, mais avec une différence principale : ils sont immuables, ce qui signifie qu'une fois créés, ils ne peuvent pas être modifiés.</p>
             <P>Les tuples sont des collections ordonnées d'éléments, similaires aux listes, mais définies en utilisant des parenthèses () au lieu de crochets [].</P>
             <code>Exemple :</code>
-            <pre><code class="python">
-# Définition d'un tuple
+            <pre><code class="python"># Définition d'un tuple
 mon_tuple = (1, 2, 3, 'a', 'b', 'c')
 
 # Accès aux éléments du tuple
 print(mon_tuple[0])  # Affiche : 1
-print(mon_tuple[3])  # Affiche : 'a'
-            </code></pre>
+print(mon_tuple[3])  # Affiche : 'a'</code></pre>
             <H6>Propriétés des Tuples</H6>
             <P>-Les tuples sont immuables, ce qui signifie qu'une fois créés, ils ne peuvent pas être modifiés.<br>
             -Ils peuvent contenir des éléments de types différents.<br>
             -Les opérations comme l'indexation et la concaténation sont applicables aux tuples.</P>
             <code>Exemple :</code>
-            <pre><code class="python">
-# Concaténation de tuples
+            <pre><code class="python"># Concaténation de tuples
 tuple1 = (1, 2, 3)
 tuple2 = ('a', 'b', 'c')
 concatenation = tuple1 + tuple2
 print(concatenation)
-# Affiche : (1, 2, 3, 'a', 'b', 'c')
-            </code></pre>
-            <h6> Utilisation des Tuples</h6>
+# Affiche : (1, 2, 3, 'a', 'b', 'c')</code></pre>
+            <h6> Utilisations sur les Tuples</h6>
             <p>-Les tuples sont utilisés pour stocker des collections d'éléments immuables.<br>
             -Ils sont souvent utilisés pour représenter des enregistrements de données avec des champs fixes.<br>
             -Les tuples sont également utilisés dans certains cas où la sécurité des données est importante car ils ne peuvent pas être modifiés accidentellement.</p>
-            <pre><code class="python">
-# Déclaration d'un tuple représentant un point en 2D
+            <pre><code class="python"># Déclaration d'un tuple représentant un point en 2D
 point = (3, 4)
 
 # Accès aux coordonnées du point
 x, y = point
 print("Coordonnées x :", x)  # Affiche : Coordonnées x : 3
-print("Coordonnées y :", y)  # Affiche : Coordonnées y : 4
+print("Coordonnées y :", y)  # Affiche : Coordonnées y : 4</code></pre>
+            <h6>Manipulations des Tuples</h6>
 
-            </code></pre>
-            <h6>quelques Opérations sur les Tuples</h6>
             <code>1. Concaténation de Tuples</code>
             <p>Les tuples peuvent être concaténés à l'aide de l'opérateur +, ce qui crée un nouveau tuple contenant les éléments des tuples d'origine.</p>
-            <pre><code class="python">
-tuple1 = (1, 2, 3)
+            <pre><code class="python">tuple1 = (1, 2, 3)
 tuple2 = ('a', 'b', 'c')
 concatenation = tuple1 + tuple2
-print(concatenation)  # Affiche : (1, 2, 3, 'a', 'b', 'c')
-            </code></pre>
+print(concatenation)  # Affiche : (1, 2, 3, 'a', 'b', 'c')</code></pre>
+
             <code>2. Répétition de Tuples</code>
             <p>Vous pouvez répéter un tuple en utilisant l'opérateur *, ce qui crée une nouvelle tuple contenant des répétitions du tuple d'origine.</p>
-            <pre><code class="python">
-tuple1 = ('a', 'b')
+            <pre><code class="python">tuple1 = ('a', 'b')
 repetition = tuple1 * 3
-print(repetition)  # Affiche : ('a', 'b', 'a', 'b', 'a', 'b')
-            </code></pre>
+print(repetition)  # Affiche : ('a', 'b', 'a', 'b', 'a', 'b')</code></pre>
+
             <code>3. Indexation et Slicing</code>
             <p>Les tuples supportent l'indexation et le slicing pour accéder aux éléments individuels ou à des sous-groupes d'éléments.</p>
-            <pre><code class="python">
+            <pre><code class="python">mon_tuple = (1, 2, 3, 'a', 'b', 'c')
+print(mon_tuple[2])     # Affiche : 3
+print(mon_tuple[1:4])   # Affiche : (2, 3, 'a')</code></pre>
 
-            </code></pre>
-            <pre><code class="python">
-
-            </code></pre>
-
+            <code>4. Longueur d'un Tuple</code>
+            <p>La fonction len() peut être utilisée pour déterminer la longueur d'un tuple, c'est-à-dire le nombre d'éléments qu'il contient.</p>
+            <pre><code class="python">mon_tuple = (1, 2, 3, 'a', 'b', 'c')
+print(len(mon_tuple))   # Affiche : 6</code></pre>
+            <p>Les tuples sont des structures de données utiles en Python lorsqu'on a besoin d'éléments immuables. Ils offrent une alternative aux listes pour stocker des collections d'éléments et sont largement utilisés dans de nombreux programmes Python. Apprenez à les utiliser correctement pour tirer le meilleur parti de leur immuabilité.</p>
         </article>
 
-        <article>
-            <h5><code>dict</code> : pour les dictionnaires, des paires clé-valeur</h5>
-            <p>Les dictionnaires sont des collections associatives d'éléments.</p>
-            <pre><code class="python">
-    # Exemple d'utilisation d'un dictionnaire
-    person = {'name': 'Alice', 'age': 25}
-    print(person)  # Affiche {'name': 'Alice', 'age': 25}
-            </code></pre>
-        </article>
+<!-- LES DICTIONNAIRES -->
 
         <article>
-            <h5><code>set</code> : pour les ensembles, des collections non ordonnées d'éléments uniques</h5>
-            <p>Les ensembles sont des collections non ordonnées d'éléments uniques.</p>
+            <h5 id ="Dictionnaires"><code>dict</code> : pour les dictionnaires, des paires clé-valeur</h5>
+            <p>Un dictionnaire en Python est une structure de données qui permet de stocker des paires clé-valeur. Chaque élément du dictionnaire est accessible par sa clé correspondante. Un dictionnaire est déclaré à l'aide d'accolades {}. Chaque élément est une paire clé-valeur, séparée par ':'.</p>
+            <code>Exemple :</code>
             <pre><code class="python">
-    # Exemple d'utilisation d'un ensemble
-    unique_numbers = {1, 2, 3, 4, 5}
-    print(unique_numbers)  # Affiche {1, 2, 3, 4, 5}
+mon_dictionnaire = {"clé1": "valeur1", "clé2": "valeur2", "clé3": "valeur3"}
+etudiant = {"nom": "Afdel", "age": "25", "taille": "1,80Kg", "signe": "capricorne", "matricule": "002911"}
+print(etudiant["nom"]) # Affiche Afdel</code></pre>
+            <h6>Manipulations des Dictionnaires</h6>
+            <p></p>
+            <p>Création d'un dictionnaire</p>
+            <pre><code>
+personne = {"nom": "Desmond", "age": "25", "ville": "Dakar"}
+print("Dictionnaire initial:", personne)
+# Affiche: Dictionnaire initial: {'nom': 'Desmond', 'age': '25', 'ville': 'Dakar'}</code></pre>
+
+            <p>Ajout d'un élément</p>
+            <pre><code>personne["email"] = "desmond@example.com"
+print("Dictionnaire après ajout:", personne)
+# Afficher : Dictionnaire après suppression: {'nom': 'Desmond', 'ville': 'Dakar', 'email': 'desmond@example.com'}</code></pre>
+
+            <p>Suppression d'un élément</p>
+            <pre><code>del personne["age"]
+print("Dictionnaire après suppression:", personne)
+# Afiche : Dictionnaire après suppression: {'nom': 'Desmond', 'ville': 'Dakar', 'email': 'desmond@example.com'}</code></pre>
+
+            <p>Modification de la valeur d'un élément</p>
+            <pre><code>personne["ville"] = "Douala"
+print("Dictionnaire après modification:", personne)
+# Affiche : Dictionnaire après modification: {'nom': 'Desmond', 'ville': 'Douala', 'email': 'desmond@example.com'}</code></pre>
+
+            <p>Affichage des clés</p>
+            <pre><code>cles = personne.keys()
+print("Clés du dictionnaire:", cles)
+# Affcihe : Clés du dictionnaire: dict_keys(['nom', 'ville', 'email'])</code></pre>
+
+            <p>Affichage des valeurs</p>
+            <pre><code>valeurs = personne.values()
+print("Valeurs du dictionnaire:", valeurs)
+# Affiche : Valeurs du dictionnaire: dict_values(['Desmond', 'Douala', 'desmond@example.com'])</code></pre>
+
+            <p>Affichage des paires clé-valeur</p>
+            <pre><code>paires = personne.items()
+print("Paires clé-valeur du dictionnaire:", paires)
+# Affiche : Paires clé-valeur du dictionnaire: dict_items([('nom', 'Desmond'), ('ville', 'Douala'), ('email', 'desmond@example.com')])</code></pre>
+
+            <p>Suppression de tous les éléments du dictionnaire</p>
+            <pre><code>personne.clear()
+print("Dictionnaire vidé:", personne)
+# Affiche : Dictionnaire vidé: {}</code></pre>
+            <p>Cet exemple montre comment créer un dictionnaire, ajouter des éléments, les supprimer, les modifier, vérifier l'existence d'une clé, afficher les clés, les valeurs et les paires clé-valeur, ainsi que vider complètement le dictionnaire.</p>
+
+        <code>Bon a Savoir</code>
+        <p>Un dictonnaire ne peut contenier des clés plusieur identique</p>
+                    <codepre><code class = "python">
+
+                    </code><pre>
+        </article>
+<!-- LES ENSEMBLES OU SET -->
+        <article>
+            <h5 id="ensembles"><code>set</code> : pour les ensembles, des collections non ordonnées d'éléments uniques</h5>
+            <p>Un ensemble, souvent appelé "set" en anglais, est une structure de données en informatique qui représente une collection d'éléments uniques et non ordonnés. En d'autres termes, un ensemble ne permet pas de stocker des éléments en double et ne garantit pas un ordre spécifique des éléments stockés à l'intérieur.</p>
+            <code>Exemple :</code>
+            <pre><code># Déclaration d'un ensemble avec des éléments répétés
+mon_set = {1, 2, 3, 2, 4, 5, 3}
+print(mon_set)  # Affiche {1, 2, 3, 4, 5}</code></pre>
+
+            <h6>Manipulations des Ensembles :</h6>
+            <code>1. Ajout d'éléments :</code>
+            <p>Vous pouvez ajouter des éléments à un ensemble à l'aide de la méthode <code>add()</code>.</p>
+            <pre><code>mon_set = {1, 2, 3}
+mon_set.add(4)
+print(mon_set)  # Affiche {1, 2, 3, 4}
             </code></pre>
+            <code>2. Suppression d'éléments :</code>
+            <p>Vous pouvez supprimer des éléments d'un ensemble à l'aide de la méthode <code>remove()</code>.</p>
+            <pre><code>mon_set = {1, 2, 3}
+mon_set.remove(2)
+print(mon_set)  # Affiche {1, 3}
+            </code></pre>
+            <code>3. Vider un ensemble :</code>
+            <p>Vous pouvez vider un ensemble en utilisant la méthode <code>clear()</code>.</p>
+            <pre><code>mon_set = {1, 2, 3}
+mon_set.clear()
+print(mon_set)  # Affiche set()
+            </code></pre>
+            <code>4. Longueur d'un ensemble :</code>
+            <p>Vous pouvez utiliser la fonction <code>len()</code> pour déterminer le nombre d'éléments dans un ensemble.</p>
+            <pre><code>mon_set = {1, 2, 3}
+print(len(mon_set))  # Affiche 3
+            </code></pre>
+            <code>Exemple :</code>
+            <pre><code># Vérification de l'appartenance à un ensemble
+mon_set = {1, 2, 3, 4, 5}
+print(3 in mon_set)  # Affiche True
+print(6 in mon_set)  # Affiche False
+
+# Opérations ensemblistes
+set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+union = set1.union(set2)  # Union de deux ensembles
+print(union)  # Affiche {1, 2, 3, 4, 5}
+
+intersection = set1.intersection(set2)  # Intersection de deux ensembles
+print(intersection)  # Affiche {3}
+
+difference = set1.difference(set2)  # Différence de deux ensembles
+print(difference)  # Affiche {1, 2}</code></pre>
+            <p>Les ensembles offrent une manière efficace de travailler avec des collections d'éléments uniques en Python. Ils sont largement utilisés pour des opérations qui nécessitent des éléments distincts sans ordre spécifique.</p>
         </article>
 
-        <h3>Structures de contrôle en Python</h3>
-        <p>Python offre diverses structures de contrôle pour gérer le flux d'exécution du programme :</p>
+
+<!-- LES STRUCTURES DE CONTROLE -->
+
         <article>
-            <h5><code>if</code> : pour exécuter du code conditionnellement</h5>
-            <p>L'instruction <code>if</code> permet d'exécuter du code uniquement si une condition est vraie.</p>
-            <pre><code class="python">
-if condition:
-# Code à exécuter si la condition est vraie
-elif autre_condition:
-# Code à exécuter si une autre condition est vraie
+    <h3 id="Structures de contrôle en Python">Structures de contrôle en Python</h3>
+    <p>Les structures de contrôle en Python sont des outils essentiels pour gérer le flux d'exécution d'un programme. Elles permettent de prendre des décisions en fonction de conditions, d'itérer sur des éléments de données, et de répéter des actions tant qu'une condition est remplie. Dans ce cours, nous explorerons les différentes structures de contrôle disponibles en Python, notamment les instructions conditionnelles (if-elif-else), les boucles (for et while), ainsi que la gestion des exceptions.</p>
+
+    <h4>1. L'instruction <code>if</code> </h4>
+    <p>L'instruction <code>if</code> permet d'exécuter un bloc de code uniquement si une condition est vraie.</p>
+    <pre><code class="python">age = 18
+if age >= 18:
+    print("Vous êtes majeur.") # Affiche Vous êtes majeur.
+#car la condition est respectée, l'age est egale a 18</code></pre>
+
+    <h4> 2. L'instruction <code>if-else</code></h4>
+    <p>L'instruction <code>if-else</code> permet d'exécuter un bloc de code si une condition est vraie, sinon un autre bloc de code est exécuté.</p>
+    <pre><code class="python">age = 15
+if age >= 18:
+    print("Vous êtes majeur.")
 else:
-# Code à exécuter si aucune condition n'est vraie
+    print("Vous êtes mineur.")
+# Affiche Vous êtes mineur.
+#car dasn ce cas l'age n'est ni supérieure, ni egale a 18</code></pre>
 
-            </code></pre>
-            <pre><code class="python">
-# Exemple d'utilisation de la structure if
-x = 10
-if x > 0:
-    print("x est positif")
-elif x = 0:
-    prin("x est nul")
+    <h4>3. L'instruction <code>if-elif-else</code></h4>
+    <p>L'instruction if-elif-else en Python permet de tester plusieurs conditions alternatives de manière séquentielle. Elle est utilisée lorsque vous avez plus de deux conditions à vérifier dans votre programme.</p>
+    <code>Voici comment elle fonctionne :</code>
+    <p><li>L'instruction if est utilisée pour tester la première condition. Si elle est vraie, le bloc de code associé à cette condition est exécuté, et les autres blocs elif et else sont ignorés.</li>
+
+<li>Si la première condition est fausse, l'instruction elif (contraction de "else if") est utilisée pour tester une autre condition. Si cette condition est vraie, le bloc de code associé à cette condition est exécuté, et les autres blocs elif et else sont ignorés.</li>
+
+<li>Si aucune des conditions précédentes n'est vraie, le bloc de code associé à l'instruction else est exécuté.</li></p>
+     <pre><code class="python">note = 75
+
+if note >= 90:
+    print("Excellent")
+elif note >= 80:
+    print("Très bien")
+elif note >= 70:
+    print("Bien")
+elif note >= 60:
+    print("Assez bien")
 else:
-    print("x est négatif")
-            </code></pre>
+    print("Insuffisant")
+
+ # Affiche Bien</code></pre>
+        <p>Les instructions conditionnelles ainsi que les opérateurs  en Python sont utilisés pour évaluer les conditions, vous serez en mesure d'écrire des programmes plus intérréssant qui répondent de manière claire aux différentes situations que vous rencontrerez. </p>
+        <h6>Opérateurs de comparaison</h6>
+        <ul>
+        <li><code>==</code> : égal à</li>
+        <li><code>!=</code> : différent de</li>
+        <li><code>&lt;</code> : inférieur à</li>
+        <li><code>&gt;</code> : supérieur à</li>
+        <li><code>&lt;=</code> : inférieur ou égal à</li>
+        <li><code>&gt;=</code> : supérieur ou égal à</li>
+    </ul>
+    <h6>Opérateurs logiques et d'appartenance</h6>
+    <p>Les opérateurs logiques permettent de combiner plusieurs conditions :</p>
+    <ul>
+        <li><code>and</code> : retourne True si les deux conditions sont vraies et False dans le cas contraire</li>
+        <li><code>or</code> : retourne True si au moins l'une des conditions est vraie et False dans le cas contraire</li>
+        <li><code>not</code> : retourne True si la condition est fausse et False dans le cas contraire</li>
+        <li><code>not in</code> : retourne True si la condition est fausse et False dans le cas contraire</li>
+    </ul>
 
             <h5><code>for</code> : pour parcourir des séquences</h5>
-            <p>L'instruction <code>for</code> permet de parcourir des séquences comme les listes, les tuples ou les chaînes de caractères.</p>
+            <p>L'instruction <code>for</code> en Python est utilisée pour parcourir des séquences telles que les listes, les tuples, les ensembles ou les chaînes de caractères. Elle permet d'exécuter un bloc de code pour chaque élément de la séquence.</p>
             <pre><code class="python">
-    # Exemple d'utilisation de la boucle for
-    numbers = [1, 2, 3, 4, 5]
-    for num in numbers:
-        print(num)
-            </code></pre>
+# Exemple d'utilisation de la boucle for
+nombre = [1, 2, 3, 4, 5]
+for nb in nombre:
+    print(nb)</code></pre>
+
+            <h6>Utilisation de la fonction range() :</h6>
+            <p>La fonction <code>range()</code> est couramment utilisée avec la boucle for pour générer une séquence de nombres. Elle permet de créer une séquence d'entiers allant d'un nombre de départ à un nombre de fin, avec un pas optionnel.</p>
+            Syntaxe de la fonction range() :
+            <pre><code class="python">range(debut, fin, pas)</code></pre>
+            <li>debut : La valeur de départ de la séquence (par défaut, 0).</li>
+            <li>fin : La valeur de fin de la séquence (non incluse).</li>
+            <li>pas : L'incrément entre chaque nombre de la séquence (par défaut, 1).</li>
+            <pre><code class="python">for i in range(5):
+print(i)</code></pre>
+            Ce bout de code affichera les nombres de 0 à 4 sur des lignes différentes.
+            <pre><code class="python">for i in range(1, 10, 2):
+    print(i)
+# Ce code affichera les nombres impairs de 1 à 9 sur des lignes différentes</code></pre>
+
+            <h6>Instructions break et continue :</h6>
+            L'instruction <code>break</code> est utilisée pour interrompre la boucle prématurément si une condition est remplie.
+            <pre><code class="python">for i in range(10):
+    if i == 5:
+        break
+    print(i)
+# Ce code affichera les nombres de 0 à 4, puis la boucle s'arrêtera dès que i sera égal à 5.</code></pre>
+
+            <li>L'instruction <code>continue</code> est utilisée pour passer à l'itération suivante de la boucle sans exécuter le reste du code dans le bloc de boucle.</li>
+            <pre><code class="python">for i in range(10):
+    if i % 2 == 0:
+        continue
+    print(i)
+# Ce code affichera tous les nombres impairs de 0 à 9 en sautant les nombres pairs.</code></pre>
+            <p>La boucle for en Python est essentielle pour parcourir des séquences de données, exécutant un bloc de code spécifique pour chaque élément. Avec range(), vous générez des séquences de nombres pour contrôler les itérations. break et continue offrent un contrôle supplémentaire. Pratiquez avec des exemples concrets pour maîtriser cette boucle efficacement.</p>
+
 
             <h4><code>while</code> : pour exécuter une boucle tant qu'une condition est vraie</h4>
-            <p>L'instruction <code>while</code> permet d'exécuter une boucle tant qu'une condition est vraie.</p>
-            <pre><code class="python">
-    # Exemple d'utilisation de la boucle while
-    count = 0
-    while count < 5:
-        print(count)
-        count += 1
-            </code></pre>
+            <p>La boucle <code>while</code> est utilisée en Python pour exécuter un bloc de code tant qu'une condition donnée est vraie. Elle permet de répéter l'exécution d'un ensemble d'instructions jusqu'à ce que la condition devienne fausse. </p>
+            <P>Supposons que nous voulions afficher les nombres de 1 à 5 à l'aide d'une boucle while :</P>
+            <pre><code class="python">count = 1
+while count <= 5:
+    print(count)
+    count += 1</code></pre>
+            <P>Imaginons que nous voulions calculer la somme des entiers de 1 à 10 à l'aide d'une boucle while :</P>
+            <pre><code class="python">total = 0
+count = 1
+while count <= 10:
+    total += count
+    count += 1
+print("La somme des entiers de 1 à 10 est :", total)</code></pre>
 
+         <h6>Instruction break :</h6>
+        <pre><code class="python">count = 1
+while True:
+    print(count)
+    count += 1
+    if count == 5:
+        break
+# Ce code affiche les nombres de 1 à 4 sur des lignes différentes, puis la boucle s'arrête lorsque count est égal à 5.</code></pre>
 
-        <article>
-            <h3 id="fonctions">Fonctions</h3>
-            <p>Les fonctions permettent de regrouper du code réutilisable :</p>
-            <pre><code>def greet(name):
-print("Bonjour,", name)
+        <h6>Instruction continue :</h6>
+        <pre><code class="python">count = 0
+while count < 5:
+    count += 1
+    if count == 3:
+        continue
+    print(count)
+# Ce code affiche les nombres de 1 à 5 sur des lignes différentes, mais il saute le nombre 3.</code></pre>
 
+        <h6>Attention aux boucles infinies :</h6>
+        <p>Il est important de faire attention aux boucles infinies, où la condition de la boucle reste toujours vraie, ce qui entraîne l'exécution continue du bloc de code sans fin.</p>
+        <p>La boucle while en Python est un outil puissant pour répéter des actions tant qu'une condition est remplie. En utilisant les instructions break et continue, ainsi qu'en veillant à éviter les boucles infinies, vous pouvez écrire des programmes efficaces et flexibles qui répondent aux besoins de votre application.</p>
+
+           <article>
+    <h3 id="fonctions-primitives">Fonctions primitives</h3>
+    <p>Les fonctions permettent de regrouper du code réutilisable :</p>
+    <pre><code>def greet(name):
+    print("Bonjour,", name)
 greet("Afdel")</code></pre>
-        </article>
 
-            <h3>Gestion des exceptions</h3>
-            <p>La gestion des exceptions permet de gérer les erreurs et les situations imprévues qui peuvent survenir lors de l'exécution d'un programme.</p>
-            <pre><code># Division par zéro
-try:
-    result = 10 / 0
-except ZeroDivisionError:
-    print("Division par zéro non autorisée")
+    <h3 id="fonction-print">Fonction <code>print()</code></h3>
+    <p>La fonction <code>print()</code> est utilisée pour afficher du texte ou d'autres objets sur la sortie standard (généralement la console). Elle prend en charge plusieurs arguments et peut afficher des chaînes de caractères, des nombres, des variables, etc.</p>
+    <pre><code>print("Hello, World!")</code></pre>
 
-# Tentative d'accès à un index inexistant dans une liste
-try:
-    numbers = [1, 2, 3]
-    print(numbers[4])
-except IndexError:
-    print("Index en dehors des limites de la liste")
+    <h3 id="fonction-input">Fonction <code>input()</code></h3>
+    <p>La fonction <code>input()</code> est utilisée pour obtenir une entrée de l'utilisateur depuis la console. Elle affiche un message facultatif, puis attend que l'utilisateur saisisse une valeur au clavier. La valeur saisie est généralement stockée dans une variable pour une utilisation ultérieure.</p>
+    <pre><code>nom = input("Entrez votre nom : ")
+print("Bonjour,", nom)</code></pre>
 
-# Conversion de chaîne de caractères en entier
-try:
-    num = int("abc")
-except ValueError:
-    print("Conversion de chaîne en entier impossible")
-</code></pre>
-        </article>
-        </ul></div>
-</section>
+    <h3 id="fonction-len">Fonction <code>len()</code></h3>
+    <p>La fonction <code>len()</code> est utilisée pour obtenir la longueur d'un objet. Elle peut être utilisée avec des chaînes de caractères, des listes, des tuples, des dictionnaires et d'autres types d'objets qui prennent en charge la notion de longueur.</p>
+    <pre><code>ma_liste = [1, 2, 3, 4, 5]
+longueur = len(ma_liste)
+print("La longueur de la liste est :", longueur)</code></pre>
+
+    <h3 id="fonction-help">Fonction <code>help()</code></h3>
+    <p>La fonction <code>help()</code> est utilisée pour obtenir de l'aide sur les objets, les modules, les fonctions, les classes, etc. Elle affiche la documentation associée à l'objet spécifié.</p>
+    <pre><code>help(list)</code></pre>
+
+
+    <h3 id="fonction-range">Fonction <code>range()</code></h3>
+    <p>La fonction <code>range()</code> est utilisée pour générer une séquence de nombres. Elle peut prendre un seul argument (fin), deux arguments (début, fin) ou trois arguments (début, fin, pas).</p>
+    <pre><code>for i in range(5):
+    print(i)
+
+for i in range(1, 10, 2):
+    print(i)</code></pre>
+           </article>
+
 
 <footer>
     <div class="copyright">
