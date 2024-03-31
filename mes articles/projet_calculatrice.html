@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculatrice Scientifique</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .calculator {
+      width: 400px;
+      margin: 50px auto;
+      padding: 10px;
+      border: 2px solid #000;
+      background-color: #000;
+      color: #fff;
+    }
+
+    .output {
+      width: calc(100% - 20px);
+      height: 50px;
+      margin-bottom: 10px;
+      padding: 10px;
+      font-size: 18px;
+      text-align: right;
+      box-sizing: border-box;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 5px;
+    }
+
+    .buttons button {
+      width: 100%;
+      height: 40px;
+      border: none;
+      background-color: #333;
+      color: #fff;
+      font-size: 16px;
+    }
+
+    .buttons button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" id="output" class="output" disabled>
+    <div class="buttons">
+      <button onclick="activerCalculatrice(true)">ON</button>
+      <button onclick="effacerAffichage()">CE</button>
+      <button onclick="changerMode()">Mode</button>
+      <button onclick="activerCalculatrice(false)">OFF</button>
+      <button onclick="calculerFonction('carré')">x<sup>2</sup></button>
+      <button onclick="calculerFonction('cube')">x<sup>3</sup></button>
+      <button onclick="calculerFonction('puissance')">x<sup>n</sup></button>
+      <button onclick="calculerFonction('ln')">ln</button>
+      <button onclick="calculerFonction('exp')">exp</button>
+      <button onclick="calculerFonction('racine')">√</button>
+      <button onclick="calculerFonction('cubique')">∛</button>
+      <button onclick="ajouterAffichage('+')">+</button>
+      <button onclick="ajouterAffichage('7')">7</button>
+      <button onclick="ajouterAffichage('8')">8</button>
+      <button onclick="ajouterAffichage('9')">9</button>
+      <button onclick="ajouterAffichage('-')">-</button>
+      <button onclick="ajouterAffichage('4')">4</button>
+      <button onclick="ajouterAffichage('5')">5</button>
+      <button onclick="ajouterAffichage('6')">6</button>
+      <button onclick="ajouterAffichage('*')">*</button>
+      <button onclick="ajouterAffichage('1')">1</button>
+      <button onclick="ajouterAffichage('2')">2</button>
+      <button onclick="ajouterAffichage('3')">3</button>
+      <button onclick="ajouterAffichage('/')">/</button>
+      <button onclick="ajouterAffichage('0')">0</button>
+      <button onclick="ajouterAffichage('.')">.</button>
+      <button onclick="calculer()">=</button>
+    </div>
+  </div>
+
+  <script>
+    let output = document.getElementById('output');
+    let calculatriceActive = false;
+    let modeScientifique = false;
+
+    function ajouterAffichage(valeur) {
+      if (calculatriceActive) {
+        output.value += valeur;
+      }
+    }
+
+    function effacerAffichage() {
+      output.value = '0';
+    }
+
+    function activerCalculatrice(activer) {
+      calculatriceActive = activer;
+      if (!calculatriceActive) {
+        effacerAffichage();é
+      } else {
+        output.value = '0';
+      }
+    }
+
+    function changerMode() {
+      modeScientifique = !modeScientifique;
+      effacerAffichage();
+    }
+
+    function calculer() {
+      if (calculatriceActive) {
+        try {
+          output.value = eval(output.value);
+        } catch (erreur) {
+          output.value = 'Erreur';
+        }
+      }
+    }
+
+    function calculerFonction(fonction) {
+      if (calculatriceActive && modeScientifique) {
+        try {
+          let x = parseFloat(output.value);
+          switch (fonction) {
+            case 'carré':
+              output.value = Math.pow(x, 2);
+              break;
+            case 'cube':
+              output.value = Math.pow(x, 3);
+              break;
+            case 'puissance':
+              let n = parseFloat(prompt("Entrez la puissance (n) :"));
+              if (!isNaN(n)) {
+                output.value = Math.pow(x, n);
+              } else {
+                output.value = 'Entrée invalide';
+              }
+              break;
+            case 'ln':
+              output.value = Math.log(x);
+              break;
+            case 'exp':
+              output.value = Math.exp(x);
+              break;
+            case 'racine':
+              output.value = Math.sqrt(x);
+              break;
+            case 'cubique':
+              output.value = Math.cbrt(x);
+              break;
+            default:
+              output.value = 'Fonction invalide';
+          }
+        } catch (erreur) {
+          output.value = 'Erreur';
+        }
+      }
+    }
+  </script>
+</body>
+</html>
