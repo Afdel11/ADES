@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <!--
-	by Afdel D
+	by KOMBOU
 --><html>
 <head>
 	<title>Discotech</title>
@@ -28,6 +28,7 @@ article {
     background-color: #f2f2f2;
 }
 
+
 .sidenav {
     height: 100%;
     width: 210px; /* Largeur initiale pour les grands écrans */
@@ -51,6 +52,10 @@ article {
 
 .sidenav a:hover {
     color: #f1f1f1;
+}
+#banner {
+    width: calc(100% - 220px); /* Soustrait la largeur de la table des matières */
+    margin-left: 220px; /* Décale la bannière pour laisser de la place à la table des matières */
 }
 
 #main {
@@ -104,14 +109,19 @@ footer {
 
 <header id="header">
         <div class="inner">
-            <a href="../index.html" class="logo">Discotech by ADes<br></a>
+            <a href="../index.html" class="logo">Discotech<br></a>
             <nav id="nav">
-                <a href="../index.html">Acceuil</a>
-                <a href="../apropos.html">Qui suis-je?</a>
                 <a href="../articles.html">Articles</a>
+
             </nav>
         </div>
     </header>
+<!-- Banniere -->
+<section id="banner"><div class="inner">
+        <img src="../images/python1.jpg" alt="" width="473" height="220" style="width: 100%;">
+		<h1>Python partie I</h1>
+        <h4>la programmation structurelle: les fondamentaux du langage</h4>
+</div></section>
     <!-- Navbar verticale à gauche -->
     <div class="sidenav"><br><br><br>
         <h6>Table Des Matières</h6>
@@ -134,30 +144,24 @@ footer {
         <a href ="#bouclefor "><li><code>for</code> : pour parcourir des séquences</li></a>
         <a href ="#bouclewhile "><li><code>while</code> : pour exécuter une boucle tant qu'une condition est vraie</li></a>
 
-
-
-
-
         <a href="#fonctions primitives"><h5>III- Fonctions Primitives</h5></a>
-        <a href ="#ensembles"><li>Ensembles <code>set</code></li></a>
-        <a href="#gestion-des-exceptions">Gestion des exceptions</a>
+        <a href ="#fonction-help"><li>Fonction <code>help()</code></li></a>
+        <a href ="#fonction-print"><li>Fonction <code>print()</code></li></a>
+        <a href ="#fonction-input"><li>Fonction <code>input()</code></li></a>
+        <a href ="#fonction-len"><li>Fonction <code>len()</code></li></a>
+        <a href="#conclusion"><h5>Conclusion</h5></a>
     </div>
 
-
 <a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
-
 <section id="main">
     <div class="inner">
 <!-- INTRODUCTION -->
         <article>
-            <h2>Python partie I:</h2>
-            <h2>la programmation structurelle: les fondamentaux du langage</h2>
-            <img src="../images/python1.jpg" alt="" width="473" height="220" style="width: 100%;">
             <h3 id="Introduction">Introduction</h3>
             <p>Dans cette aventure nous découvrirons la puissance, la flexibilité et la simplicité de ce langage qui se défie les limites de la programmation traditionnelle. Python est votre allié essentiel dans la conquête de nouveaux horizons technologiques. Que vous souhaitiez manipuler d'énormes volumes de données, concevoir des applications web dynamiques ou plonger dans le domaine de l'intelligence artificielle, Python vous guide vers des sommets inattendus. Avec sa syntaxe claire et son approche intuitive, Python démocratise la programmation, ouvrant ainsi la voie à la créativité et à la logique, où chaque ligne de code est un pas de plus vers la concrétisation de vos ambitions. Dans un monde en constante évolution de la technologie, Python devient une baguette magique, offrant des possibilités infinies pour ceux qui se laissent emporter par sa magie.</p>
 
 <!-- VARIABLES ET TYPES -->
-            <h3 id ="Variables et types de données">Variables et types de données</h3>
+            <h3 id ="Variables et types de données">I- Variables et types de données</h3>
             <p>En Python, les variables servent de conteneurs pour stocker différentes formes de données. Chaque variable est associée à un nom qui permet de la référencer et de manipuler sa valeur. Python est un langage dynamiquement typé, ce qui signifie que vous n'avez pas besoin de déclarer explicitement le type de variable lors de leur création ; le type est déduit automatiquement lors de l'attribution de valeurs</p>
             <p>Ainsi nous distinguons plusieurs types primitifs de vraiable a savoir:<li>Entiers ou Integer <code>int</code> <li>Décimaux ou Flottants <code>float</code> <li>Chaînes de caractères <code>str</code><li>Booléens <code>bool</code></li><li>Listes <code>list</code></li><li>Tuples <code>tuple</code></li><li> Dictionnaires <code>dict</code></li></p>
             <p>aque type de données a ses propres méthodes et opérations associées. Nous illustrons ci-dessous quelques exemples d'utilisation avec des cas concrets.</p>
@@ -604,22 +608,8 @@ while count < 5:
     <h3 id="fonctions-primitives">III- Fonctions primitives</h3>
     <p>Les fonctions permettent de regrouper du code réutilisable :</p>
 
-    <h6 id="fonction-print">Fonction <code>print()</code></h6>
-    <p>La fonction <code>print()</code> est utilisée pour afficher du texte ou d'autres objets sur la sortie standard (généralement la console). Elle prend en charge plusieurs arguments et peut afficher des chaînes de caractères, des nombres, des variables, etc.</p>
-    <pre><code>print("Hello, World!")</code></pre>
-
-    <h6 id="fonction-input">Fonction <code>input()</code></h6>
-    <p>La fonction <code>input()</code> est utilisée pour obtenir une entrée de l'utilisateur depuis la console. Elle affiche un message facultatif, puis attend que l'utilisateur saisisse une valeur au clavier. La valeur saisie est généralement stockée dans une variable pour une utilisation ultérieure.</p>
-    <pre><code>nom = input("Entrez votre nom : ")
-print("Bonjour,", nom)</code></pre>
-
-    <h6 id="fonction-len">Fonction <code>len()</code></h6>
-    <p>La fonction <code>len()</code> est utilisée pour obtenir la longueur d'un objet. Elle peut être utilisée avec des chaînes de caractères, des listes, des tuples, des dictionnaires et d'autres types d'objets qui prennent en charge la notion de longueur.</p>
-    <pre><code>ma_liste = [1, 2, 3, 4, 5]
-longueur = len(ma_liste)
-print("La longueur de la liste est :", longueur)</code></pre>
-
-    <h6 id="fonction-help">Fonction <code>help()</code></h6>
+   <h6 id="fonction-help">📌 Fonction <code>help()</code></h6>
+   <p>La fonction help() en Python est une fonction intégrée qui permet d'obtenir de l'aide sur les modules, les fonctions, les classes, les méthodes, etc. Elle affiche généralement la documentation associée à l'objet passé en argument. c'est a mon sens la fonction la plus essentielle de ce language</p>
     <pre><code>help(print)
 # affiche: print(*args, sep=' ', end='\n', file=None, flush=False)
     Prints the values to a stream, or to sys.stdout by default.
@@ -632,6 +622,22 @@ print("La longueur de la liste est :", longueur)</code></pre>
       a file-like object (stream); defaults to the current sys.stdout.
     flush
       whether to forcibly flush the stream.</code></pre>
+
+    <h6 id="fonction-print">📌 Fonction <code>print()</code></h6>
+    <p>La fonction <code>print()</code> est utilisée pour afficher du texte ou d'autres objets sur la sortie standard (généralement la console). Nous l'avons utilisé tou au long de ce cours et on constate qu'elle peut prendre en charge plusieurs arguments et peut afficher des chaînes de caractères, des nombres, des variables, etc.</p>
+    <pre><code>print("salut, j'apprends a coder en python!")</code></pre>
+
+    <h6 id="fonction-input">📌 Fonction <code>input()</code></h6>
+    <p>La fonction <code>input()</code> est utilisée pour obtenir une entrée de l'utilisateur depuis la console. Elle affiche un message facultatif, puis attend que l'utilisateur saisisse une valeur au clavier. La valeur saisie est généralement stockée dans une variable pour une utilisation ultérieure.</p>
+    <pre><code>nom = input("Entrez votre nom : ")
+print("Bonjour,", nom)</code></pre>
+
+    <h6 id="fonction-len">📌 Fonction <code>len()</code></h6>
+    <p>La fonction <code>len()</code> est utilisée pour obtenir la longueur d'un objet. Elle peut être utilisée avec des chaînes de caractères, des listes, des tuples, des dictionnaires et d'autres types d'objets qui prennent en charge la notion de longueur.</p>
+    <pre><code>ma_liste = [1, 2, 3, 4, 5]
+longueur = len(ma_liste)
+print("La longueur de la liste est :", longueur)</code></pre>
+
 
 <p>En plus des fonctions <code>print()</code>, <code>input()</code>, <code>help()</code>, <code>len ()</code>, Python offre d'autres fonctions primitives que je vous encourage à explorer par vous même. voici une liste non exostive que vous completerez surement suivant vos besoins personnels</p>
 
@@ -653,10 +659,18 @@ print("La longueur de la liste est :", longueur)</code></pre>
            </article>
         </article>
 
-<!-- footer -->
-<section><div class="copyright">
-copyright: <a href=>Afdel_Desmond_Kombou</a>.
+    </section>
+
+<!-- Footer -->
+
+<div class="copyright">
+    <ul class="actions">
+        <li>copyright: KOMBOU</li>
+        <li><a href="../apropos" class="reset-button">DONNEZ VOTRE AVIS</a></li>
+    </ul>
 </div>
-</section>
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script><script src="assets/js/skel.min.js"></script><script src="assets/js/util.js"></script><script src="assets/js/main.js"></script></body></html>
+
+
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script><script src="assets/js/skel.min.js"></script><script src="assets/js/util.js"></script><script src="assets/js/main.js"></script></body></html>
