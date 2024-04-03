@@ -8,8 +8,8 @@
 	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<link rel="stylesheet" href="../assets/css/main.css">
-	<style>
-    body {
+<style>
+body {
     text-align: justify;
     background-color: #ffffff;
     margin: 0;
@@ -27,7 +27,6 @@ article {
     padding: 0 20px;
     background-color: #f2f2f2;
 }
-
 
 .sidenav {
     height: 100%;
@@ -53,6 +52,7 @@ article {
 .sidenav a:hover {
     color: #f1f1f1;
 }
+
 #banner {
     width: calc(100% - 220px); /* Soustrait la largeur de la table des matières */
     margin-left: 220px; /* Décale la bannière pour laisser de la place à la table des matières */
@@ -61,11 +61,14 @@ article {
     background-position: center; /* Centrez l'image */
 }
 
-
 #main {
     width: calc(100% - 210px); /* Largeur initiale pour les grands écrans */
     margin-left: 210px; /* Décalage initiale pour les grands écrans */
     padding: 0;
+}
+
+section {
+    margin: 20px 0; /* Ajoute un peu d'espace autour des sections */
 }
 
 footer {
@@ -79,12 +82,17 @@ footer {
 
 /* Media Query pour les écrans jusqu'à 600px */
 @media screen and (max-width: 600px) {
-
-    .banner {
-    width: 100%; /* La baniere sur mobile */
+    #banner {
+        width: 100%; /* La bannière sur mobile */
+        margin-left: 0; /* Pas de décalage nécessaire */
     }
+
+    .sidenav, #main, footer {
+        width: 100%; /* La barre latérale, le contenu principal et le pied de page prennent toute la largeur */
+        margin-left: 0; /* Pas de décalage nécessaire */
+    }
+
     .sidenav {
-        width: 100%; /* La barre latérale prend toute la largeur */
         height: auto; /* Hauteur auto pour contenir tous les liens */
         position: relative; /* Position relative pour ne pas gêner le contenu */
     }
@@ -93,25 +101,12 @@ footer {
         font-size: 12px; /* Taille de police ajustée */
     }
 
-    #main {
-        width: 100%; /* La zone principale prend toute la largeur */
-        margin-left: 0; /* Plus de décalage nécessaire */
-    }
-
-    article {
-        /* Adaptation de la largeur et du padding pour les petits écrans */
-        margin: 10px auto;
-        max-width: 100%;
-        padding: 0 10px;
-    }
-
     footer {
-        width: 100%; /* Assure que le footer prend toute la largeur */
-        bottom: 0; /* Aligné au bas */
+        position: relative; /* Change à relative pour s'adapter au contenu */
     }
 }
+</style>
 
- </style>
 </head>
 <body>
 
