@@ -145,6 +145,8 @@ footer {
         <a href ="#Opérateurs de comparaison "><li>Opérateurs de comparaison</li></a>
         <a href ="#bouclefor "><li><code>for</code> : pour parcourir des séquences</li></a>
         <a href ="#bouclewhile "><li><code>while</code> : pour exécuter une boucle tant qu'une condition est vraie</li></a>
+        <a href ="#Instruction-break"><li>Instruction<code>break</code></li></a>
+        <a href ="#Instruction-continue"><li>Instruction<code>continue</code></li></a>
 
         <a href="#fonctions primitives"><h5>III- Fonctions Primitives</h5></a>
         <a href ="#fonction-help"><li>Fonction <code>help()</code></li></a>
@@ -160,7 +162,7 @@ footer {
 <!-- INTRODUCTION -->
         <article>
             <h3 id="Introduction">Introduction</h3>
-            <p>Dans cette aventure nous découvrirons la puissance, la flexibilité et la simplicité de ce langage qui se défie les limites de la programmation traditionnelle. Python est votre allié essentiel dans la conquête de nouveaux horizons technologiques. Que vous souhaitiez manipuler d'énormes volumes de données, concevoir des applications web dynamiques ou plonger dans le domaine de l'intelligence artificielle, Python vous guide vers des sommets inattendus. Avec sa syntaxe claire et son approche intuitive, Python démocratise la programmation, ouvrant ainsi la voie à la créativité et à la logique, où chaque ligne de code est un pas de plus vers la concrétisation de vos ambitions. Dans un monde en constante évolution de la technologie, Python devient une baguette magique, offrant des possibilités infinies pour ceux qui se laissent emporter par sa magie.</p>
+            <p>Embarquons ensemble dans une aventure passionnante au cœur de Python 🌌! Ce langage, par sa puissance et sa simplicité, repousse les frontières de la programmation classique et se révèle être un outil incontournable dans l'arsenal de tout développeur. Que l'on cherche à analyser de vastes données, créer des applications web vivantes ou explorer l'univers fascinant de l'intelligence artificielle, Python est la clé qui ouvre toutes ces portes 🗝️. Sa syntaxe limpide et son approche intuitive rendent la programmation accessible à tous, favorisant l'innovation et le raisonnement logique. Chaque ligne de code écrite en Python est un pas en avant dans la réalisation de vos projets les plus ambitieux. Dans le tourbillon technologique actuel, Python est plus qu'un langage ; c'est une véritable baguette magique pour ceux prêts à se laisser ensorceler par ses capacités 🚀.<b>Prêts pour l'aventure ? 🚀 Let's code!</b></p>
 
 <!-- VARIABLES ET TYPES -->
             <h3 id ="Variables et types de données">I- Variables et types de données</h3>
@@ -551,23 +553,7 @@ print(i)</code></pre>
             <pre><code class="python">for i in range(1, 10, 2):
     print(i)
 # Ce code affichera les nombres impairs de 1 à 9 sur des lignes différentes</code></pre>
-
-            <b>Instructions break et continue :</b>
-            L'instruction <code>break</code> est utilisée pour interrompre la boucle prématurément si une condition est remplie.
-            <pre><code class="python">for i in range(10):
-    if i == 5:
-        break
-    print(i)
-# Ce code affichera les nombres de 0 à 4, puis la boucle s'arrêtera dès que i sera égal à 5.</code></pre>
-
-            <li>L'instruction <code>continue</code> est utilisée pour passer à l'itération suivante de la boucle sans exécuter le reste du code dans le bloc de boucle.</li>
-            <pre><code class="python">for i in range(10):
-    if i % 2 == 0:
-        continue
-    print(i)
-# Ce code affichera tous les nombres impairs de 0 à 9 en sautant les nombres pairs.</code></pre>
-            <p>La boucle for en Python est essentielle pour parcourir des séquences de données, exécutant un bloc de code spécifique pour chaque élément. Avec range(), vous générez des séquences de nombres pour contrôler les itérations. break et continue offrent un contrôle supplémentaire. Pratiquez avec des exemples concrets pour maîtriser cette boucle efficacement.</p>
-
+            <p>La boucle for en Python est essentielle pour parcourir des séquences de données, exécutant un bloc de code spécifique pour chaque élément. Avec range(), vous générez des séquences de nombres pour contrôler les itérations.</p>
 
             <h5 id="bouclewhile">📌<code>while</code> : pour exécuter une boucle tant qu'une condition est vraie</h5>
             <p>La boucle <code>while</code> est utilisée en Python pour exécuter un bloc de code tant qu'une condition donnée est vraie. Elle permet de répéter l'exécution d'un ensemble d'instructions jusqu'à ce que la condition devienne fausse. </p>
@@ -583,9 +569,12 @@ while count <= 10:
     total += count
     count += 1
 print("La somme des entiers de 1 à 10 est :", total)</code></pre>
+        <p>La boucle while en Python est un outil puissant que pourrez utiliser pour écrire des programmes efficaces et flexibles qui répondent aux besoins de votre application en utilisant cette structure de contrôle de flux.</p>
 
-         <b>Instruction <code>break</code> :</b>
-        <pre><code class="python">count = 1
+        <h5 id="Instruction-break">📌 Instruction <code>break</code></h5>
+         <P>L'instruction <code>break</code> est utilisée pour interrompre la boucle prématurément si une condition est remplie.</P>
+
+            <pre><code class="python">count = 1
 while True:
     print(count)
     count += 1
@@ -593,7 +582,20 @@ while True:
         break
 # Ce code affiche les nombres de 1 à 4 sur des lignes différentes, puis la boucle s'arrête lorsque count est égal à 5.</code></pre>
 
-        <b>Instruction <code>continue</code> :</b>
+            <pre><code class="python">for i in range(10):
+    if i == 5:
+        break
+    print(i)
+# Ce code affichera les nombres de 0 à 4, puis la boucle s'arrêtera dès que i sera égal à 5.</code></pre>
+
+            <h5 id="Instruction-continue">📌 Instruction <code>continue</code></h5>
+<li>L'instruction <code>continue</code> est utilisée pour passer à l'itération suivante de la boucle sans exécuter le reste du code dans le bloc de boucle.</li>
+            <pre><code class="python">for i in range(10):
+    if i % 2 == 0:
+        continue
+    print(i)
+# Ce code affichera tous les nombres impairs de 0 à 9 en sautant les nombres pairs.</code></pre>
+
         <pre><code class="python">count = 0
 while count < 5:
     count += 1
@@ -604,13 +606,12 @@ while count < 5:
 
         <strong>⚠️ Attention aux boucles infinies :</strong>
         <p>Il est important de faire attention aux boucles infinies, où la condition de la boucle reste toujours vraie, ce qui entraîne l'exécution continue du bloc de code sans fin.</p>
-        <p>La boucle while en Python est un outil puissant pour répéter des actions tant qu'une condition est remplie. En utilisant les instructions break et continue, ainsi qu'en veillant à éviter les boucles infinies, vous pouvez écrire des programmes efficaces et flexibles qui répondent aux besoins de votre application.</p>
 
-           <article>
+            <article>
     <h3 id="fonctions-primitives">III- Fonctions primitives</h3>
     <p>Les fonctions permettent de regrouper du code réutilisable :</p>
 
-   <h6 id="fonction-help">📌 Fonction <code>help()</code></h6>
+   <h5 id="fonction-help">📌 Fonction <code>help()</code></h5>
    <p>La fonction help() en Python est une fonction intégrée qui permet d'obtenir de l'aide sur les modules, les fonctions, les classes, les méthodes, etc. Elle affiche généralement la documentation associée à l'objet passé en argument. c'est a mon sens la fonction la plus essentielle de ce language</p>
     <pre><code>help(print)
 # affiche: print(*args, sep=' ', end='\n', file=None, flush=False)
@@ -625,16 +626,16 @@ while count < 5:
     flush
       whether to forcibly flush the stream.</code></pre>
 
-    <h6 id="fonction-print">📌 Fonction <code>print()</code></h6>
+    <h5 id="fonction-print">📌 Fonction <code>print()</code></h5>
     <p>La fonction <code>print()</code> est utilisée pour afficher du texte ou d'autres objets sur la sortie standard (généralement la console). Nous l'avons utilisé tou au long de ce cours et on constate qu'elle peut prendre en charge plusieurs arguments et peut afficher des chaînes de caractères, des nombres, des variables, etc.</p>
     <pre><code>print("salut, j'apprends a coder en python!")</code></pre>
 
-    <h6 id="fonction-input">📌 Fonction <code>input()</code></h6>
+    <h5 id="fonction-input">📌 Fonction <code>input()</code></h6>
     <p>La fonction <code>input()</code> est utilisée pour obtenir une entrée de l'utilisateur depuis la console. Elle affiche un message facultatif, puis attend que l'utilisateur saisisse une valeur au clavier. La valeur saisie est généralement stockée dans une variable pour une utilisation ultérieure.</p>
     <pre><code>nom = input("Entrez votre nom : ")
 print("Bonjour,", nom)</code></pre>
 
-    <h6 id="fonction-len">📌 Fonction <code>len()</code></h6>
+    <h5 id="fonction-len">📌 Fonction <code>len()</code></h5>
     <p>La fonction <code>len()</code> est utilisée pour obtenir la longueur d'un objet. Elle peut être utilisée avec des chaînes de caractères, des listes, des tuples, des dictionnaires et d'autres types d'objets qui prennent en charge la notion de longueur.</p>
     <pre><code>ma_liste = [1, 2, 3, 4, 5]
 longueur = len(ma_liste)
@@ -660,8 +661,14 @@ print("La longueur de la liste est :", longueur)</code></pre>
 </ul>
            </article>
         </article>
+    <h3 id="conclusion">Conclusion</h3>
+    <p>Découvrir les bases de Python, c'est comme ouvrir la porte d'un vaste univers de programmation 🚀. Bien que nous ayons effleuré seulement la surface, l'apprentissage ne s'arrête jamais. N'oubliez pas d'explorer plus loin, de pratiquer régulièrement, et de rejoindre des communautés pour partager vos découvertes. La suite promet d'être excitante avec la programmation fonctionnelle et orientée objet au programme des parties 2 et 3 🎓. Gardez votre curiosité en éveil et continuez à coder !</p>
+        <article>
 
-    </section>
+        </article>
+
+
+        </section>
 
 <!-- Footer -->
 
